@@ -296,3 +296,12 @@ The suite verifies:
 
 *Disclaimer: Course syllabus, subject codes, and recruitment conditions are subject to university ordinances and corporate recruitment guidelines. No roadmap can guarantee placement; consistent problem-solving and rigorous engineering effort determine individual outcomes.*
 
+---
+
+## 12. License & Author Credit
+
+Created with care by **Deb** ([debdeveloper2207@gmail.com](mailto:debdeveloper2207@gmail.com)).
+
+This project is licensed under the [MIT License](LICENSE) — see the [LICENSE](LICENSE) file for complete terms and permissions.
+© 2026 AEIE Career Navigator. All Rights Reserved.
+

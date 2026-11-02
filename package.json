@@ -21,8 +21,8 @@
     "express",
     "mongodb"
   ],
-  "author": "Department of AEIE, UIT Burdwan",
-  "license": "ISC",
+  "author": "Deb <debdeveloper2207@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
