@@ -1,0 +1,36 @@
+{
+  "name": "aeie-career-navigator",
+  "version": "2.0.0",
+  "description": "UIT Burdwan AEIE 4-Year Career Roadmap & Full-Stack Career Planning Platform (2026–2030)",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js",
+    "seed": "node backend/seeder.js",
+    "seed:destroy": "node backend/seeder.js -d",
+    "test": "node backend/tests/api.test.js"
+  },
+  "keywords": [
+    "aeie",
+    "uit-burdwan",
+    "career-roadmap",
+    "applied-electronics",
+    "instrumentation",
+    "full-stack",
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "Department of AEIE, UIT Burdwan",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.3",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.3.4",
+    "nodemailer": "^10.3.1"
+  }
+}

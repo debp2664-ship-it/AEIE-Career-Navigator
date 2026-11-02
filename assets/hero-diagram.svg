@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="heroCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b162c" />
+      <stop offset="100%" stop-color="#050a17" />
+    </linearGradient>
+    <linearGradient id="neonTrace" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d2ff" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="240" rx="16" fill="url(#heroCardGrad)" stroke="rgba(0, 210, 255, 0.3)" stroke-width="1.5" />
+
+  <!-- Flow Header -->
+  <text x="450" y="32" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="800" fill="#00d2ff" text-anchor="middle" letter-spacing="1">
+    APPLIED ELECTRONICS &amp; INSTRUMENTATION ENGINEERING ARCHITECTURE (2026–2030)
+  </text>
+
+  <!-- Flow Stages -->
+  <g transform="translate(30, 55)">
+    <!-- Stage 1: Physical Process & Sensors -->
+    <rect x="0" y="10" width="145" height="110" rx="10" fill="#0c172e" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="72" cy="40" r="18" fill="rgba(56, 189, 248, 0.15)" />
+    <text x="72" y="44" font-family="'JetBrains Mono', monospace" font-size="12" fill="#38bdf8" text-anchor="middle">SENSORS</text>
+    <text x="72" y="75" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Physical Process</text>
+    <text x="72" y="94" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">RTD, Strain, Piezo</text>
+
+    <!-- Connect 1 -> 2 -->
+    <path d="M 145 65 H 175" fill="none" stroke="url(#neonTrace)" stroke-width="2.5" />
+    <polygon points="175,65 168,61 168,69" fill="#00d2ff" />
+
+    <!-- Stage 2: Signal Conditioning (Op-Amps) -->
+    <rect x="175" y="10" width="145" height="110" rx="10" fill="#0c172e" stroke="#00d2ff" stroke-width="1.5" />
+    <circle cx="247" cy="40" r="18" fill="rgba(0, 210, 255, 0.15)" />
+    <text x="247" y="44" font-family="'JetBrains Mono', monospace" font-size="12" fill="#00d2ff" text-anchor="middle">ANALOG</text>
+    <text x="247" y="75" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Conditioning</text>
+    <text x="247" y="94" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Op-Amp 741, Filters</text>
+
+    <!-- Connect 2 -> 3 -->
+    <path d="M 320 65 H 350" fill="none" stroke="url(#neonTrace)" stroke-width="2.5" />
+    <polygon points="350,65 343,61 343,69" fill="#3b82f6" />
+
+    <!-- Stage 3: Embedded MCU / ADC -->
+    <rect x="350" y="10" width="145" height="110" rx="10" fill="#0c172e" stroke="#60a5fa" stroke-width="1.5" />
+    <circle cx="422" cy="40" r="18" fill="rgba(96, 165, 250, 0.15)" />
+    <text x="422" y="44" font-family="'JetBrains Mono', monospace" font-size="12" fill="#60a5fa" text-anchor="middle">EMBEDDED</text>
+    <text x="422" y="75" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">MCU &amp; DSP</text>
+    <text x="422" y="94" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">STM32, C++, ADC</text>
+
+    <!-- Connect 3 -> 4 -->
+    <path d="M 495 65 H 525" fill="none" stroke="url(#neonTrace)" stroke-width="2.5" />
+    <polygon points="525,65 518,61 518,69" fill="#a855f7" />
+
+    <!-- Stage 4: Industrial PLC & SCADA -->
+    <rect x="525" y="10" width="145" height="110" rx="10" fill="#0c172e" stroke="#a855f7" stroke-width="1.5" />
+    <circle cx="597" cy="40" r="18" fill="rgba(168, 85, 247, 0.15)" />
+    <text x="597" y="44" font-family="'JetBrains Mono', monospace" font-size="12" fill="#c084fc" text-anchor="middle">PLC/SCADA</text>
+    <text x="597" y="75" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Automation</text>
+    <text x="597" y="94" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Modbus, PID Loop</text>
+
+    <!-- Connect 4 -> 5 -->
+    <path d="M 670 65 H 700" fill="none" stroke="url(#neonTrace)" stroke-width="2.5" />
+    <polygon points="700,65 693,61 693,69" fill="#10b981" />
+
+    <!-- Stage 5: Cloud Telemetry & Actuators -->
+    <rect x="700" y="10" width="140" height="110" rx="10" fill="#0c172e" stroke="#10b981" stroke-width="1.5" />
+    <circle cx="770" cy="40" r="18" fill="rgba(16, 185, 129, 0.15)" />
+    <text x="770" y="44" font-family="'JetBrains Mono', monospace" font-size="12" fill="#10b981" text-anchor="middle">OUTPUT</text>
+    <text x="770" y="75" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#f8fafc" text-anchor="middle">Actuation &amp; Cloud</text>
+    <text x="770" y="94" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Valves, Motors, IoT</text>
+  </g>
+
+  <!-- Feedback Loop Closed Circuit Arrow (Returning from Stage 5 to Stage 1) -->
+  <g transform="translate(30, 195)">
+    <path d="M 770 0 V 18 H 72 V 0" fill="none" stroke="rgba(0, 210, 255, 0.5)" stroke-width="2" stroke-dasharray="4,4" />
+    <polygon points="72,0 68,7 76,7" fill="#00d2ff" />
+    <text x="420" y="24" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8" text-anchor="middle">CLOSED-LOOP FEEDBACK CONTROL &amp; ERROR COMPENSATION (AEIE CORE)</text>
+  </g>
+</svg>
+

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061226" />
+      <stop offset="50%" stop-color="#0a1a38" />
+      <stop offset="100%" stop-color="#030814" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="400" fill="url(#bgGrad3)" />
+
+  <!-- Industrial PLC Rack on the Left -->
+  <g transform="translate(60, 45)">
+    <rect width="420" height="310" rx="10" fill="#0c1527" stroke="#3b82f6" stroke-width="2" />
+    <rect width="420" height="40" rx="10" fill="#1e293b" />
+    <text x="24" y="26" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#38bdf8">PROGRAMMABLE LOGIC CONTROLLER (PLC)</text>
+    
+    <!-- Modules: Power Supply, CPU, DI, DO, AI, AO -->
+    <g transform="translate(20, 55)">
+      <!-- Power Supply -->
+      <rect x="0" y="0" width="60" height="230" rx="6" fill="#1e293b" stroke="#334155" />
+      <text x="30" y="30" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8" text-anchor="middle">24V DC</text>
+      <circle cx="30" cy="60" r="4" fill="#10b981" />
+      <text x="30" y="80" font-family="'JetBrains Mono', monospace" font-size="9" fill="#10b981" text-anchor="middle">PWR</text>
+
+      <!-- CPU Module -->
+      <rect x="65" y="0" width="85" height="230" rx="6" fill="#0f172a" stroke="#00d2ff" />
+      <text x="107" y="30" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#00d2ff" text-anchor="middle">CPU 1214C</text>
+      <circle cx="107" cy="60" r="4" fill="#10b981" />
+      <text x="107" y="80" font-family="'JetBrains Mono', monospace" font-size="9" fill="#10b981" text-anchor="middle">RUN</text>
+      <rect x="75" y="100" width="65" height="40" rx="4" fill="#0284c7" fill-opacity="0.2" stroke="#0284c7" />
+      <text x="107" y="125" font-family="'JetBrains Mono', monospace" font-size="10" fill="#38bdf8" text-anchor="middle">PROFINET</text>
+
+      <!-- Digital Input -->
+      <rect x="155" y="0" width="55" height="230" rx="6" fill="#1e293b" stroke="#334155" />
+      <text x="182" y="30" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8" text-anchor="middle">DI 8x</text>
+      <circle cx="182" cy="60" r="3" fill="#10b981" />
+      <circle cx="182" cy="80" r="3" fill="#10b981" />
+      <circle cx="182" cy="100" r="3" fill="#64748b" />
+      <circle cx="182" cy="120" r="3" fill="#10b981" />
+
+      <!-- Analog Input (4-20 mA) -->
+      <rect x="215" y="0" width="80" height="230" rx="6" fill="#1e293b" stroke="#334155" />
+      <text x="255" y="30" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8" text-anchor="middle">AI 4x HART</text>
+      <text x="255" y="65" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f59e0b" text-anchor="middle">12.45 mA</text>
+      <text x="255" y="100" font-family="'JetBrains Mono', monospace" font-size="11" fill="#10b981" text-anchor="middle">4.02 bar</text>
+
+      <!-- Communication & Fieldbus -->
+      <rect x="300" y="0" width="75" height="230" rx="6" fill="#1e293b" stroke="#334155" />
+      <text x="337" y="30" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94a3b8" text-anchor="middle">MODBUS</text>
+      <text x="337" y="55" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94a3b8" text-anchor="middle">RS-485</text>
+      <circle cx="337" cy="80" r="4" fill="#10b981" />
+      <text x="337" y="100" font-family="'JetBrains Mono', monospace" font-size="9" fill="#10b981" text-anchor="middle">ONLINE</text>
+    </g>
+  </g>
+
+  <!-- SCADA HMI Graphic on the Right -->
+  <g transform="translate(520, 45)">
+    <rect width="620" height="310" rx="10" fill="#080f1e" stroke="#00d2ff" stroke-width="2" />
+    <rect width="620" height="40" rx="10" fill="#0d1b38" />
+    <text x="24" y="26" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#00d2ff">SCADA PROCESS FLOW: CONTINUOUS REACTOR VESSEL</text>
+    <text x="590" y="26" font-family="'JetBrains Mono', monospace" font-size="12" fill="#10b981" text-anchor="end">STATUS: NORMAL</text>
+
+    <!-- Pipeline and Vessel Graphic -->
+    <g transform="translate(40, 60)">
+      <!-- Chemical / Steam Tank -->
+      <rect x="180" y="30" width="160" height="160" rx="30" fill="#0f2142" stroke="#38bdf8" stroke-width="2.5" />
+      <path d="M 182 130 Q 260 140, 338 130 L 338 180 Q 260 190, 182 180 Z" fill="#0284c7" fill-opacity="0.5" />
+      <text x="260" y="100" font-family="'Space Grotesk', sans-serif" font-size="15" font-weight="700" fill="#f8fafc" text-anchor="middle">TANK T-101</text>
+      <text x="260" y="125" font-family="'JetBrains Mono', monospace" font-size="13" fill="#38bdf8" text-anchor="middle">LEVEL: 68.4%</text>
+
+      <!-- Inlet Pipe & Valve -->
+      <line x1="20" y1="60" x2="180" y2="60" stroke="#00d2ff" stroke-width="6" stroke-linecap="round" />
+      <polygon points="70,45 100,60 70,75" fill="#f43f5e" />
+      <polygon points="130,45 100,60 130,75" fill="#f43f5e" />
+      <text x="100" y="95" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f43f5e" text-anchor="middle">FCV-101 [85%]</text>
+
+      <!-- Outlet Pipe & Flow Transducer -->
+      <line x1="340" y1="160" x2="520" y2="160" stroke="#00d2ff" stroke-width="6" stroke-linecap="round" />
+      <circle cx="430" cy="160" r="16" fill="#0b172e" stroke="#10b981" stroke-width="2" />
+      <text x="430" y="165" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#10b981" text-anchor="middle">FT</text>
+      <text x="430" y="195" font-family="'JetBrains Mono', monospace" font-size="11" fill="#10b981" text-anchor="middle">145.2 m³/h</text>
+    </g>
+
+    <!-- Closed-Loop PID Summary Bar -->
+    <g transform="translate(30, 260)">
+      <rect width="560" height="36" rx="6" fill="#0b172e" stroke="#1e293b" />
+      <text x="20" y="23" font-family="'JetBrains Mono', monospace" font-size="12" fill="#94a3b8">PID Controller: SP=70.0°C | PV=69.8°C | CV=48.2% | Kp=2.4 Ti=12s Td=1.5s</text>
+    </g>
+  </g>
+</svg>
+

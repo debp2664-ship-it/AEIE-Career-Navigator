@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1226" />
+      <stop offset="50%" stop-color="#0e1738" />
+      <stop offset="100%" stop-color="#040817" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="400" fill="url(#bgGrad4)" />
+
+  <!-- Left: Capstone Engineering Project Blueprint -->
+  <g transform="translate(60, 45)">
+    <rect width="520" height="310" rx="10" fill="#070f20" stroke="#00d2ff" stroke-width="2" />
+    <rect width="520" height="40" rx="10" fill="#0f1f40" />
+    <text x="24" y="26" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#00d2ff">CAPSTONE FINAL YEAR PROJECT ARCHITECTURE</text>
+
+    <!-- Edge-to-Cloud IoT telemetry block diagram -->
+    <g transform="translate(24, 65)">
+      <!-- Node 1: Smart Sensor Array -->
+      <rect x="0" y="30" width="120" height="70" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+      <text x="60" y="58" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#f8fafc" text-anchor="middle">Smart Sensors</text>
+      <text x="60" y="78" font-family="'JetBrains Mono', monospace" font-size="10" fill="#38bdf8" text-anchor="middle">Vibration/Temp</text>
+
+      <!-- Arrow -->
+      <line x1="120" y1="65" x2="160" y2="65" stroke="#00d2ff" stroke-width="2" marker-end="url(#arrow)" />
+      
+      <!-- Node 2: Embedded Edge Processor -->
+      <rect x="160" y="30" width="140" height="70" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+      <text x="230" y="58" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#f8fafc" text-anchor="middle">ESP32 / FreeRTOS</text>
+      <text x="230" y="78" font-family="'JetBrains Mono', monospace" font-size="10" fill="#10b981" text-anchor="middle">Kalman Filter</text>
+
+      <!-- Arrow -->
+      <line x1="300" y1="65" x2="340" y2="65" stroke="#00d2ff" stroke-width="2" />
+
+      <!-- Node 3: Cloud & MQTT Broker -->
+      <rect x="340" y="30" width="130" height="70" rx="6" fill="#0f172a" stroke="#a855f7" stroke-width="1.5" />
+      <text x="405" y="58" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#f8fafc" text-anchor="middle">Cloud Dashboard</text>
+      <text x="405" y="78" font-family="'JetBrains Mono', monospace" font-size="10" fill="#c084fc" text-anchor="middle">MQTT / REST API</text>
+    </g>
+
+    <g transform="translate(24, 190)">
+      <rect width="472" height="90" rx="6" fill="#0b172e" stroke="#1e293b" />
+      <text x="16" y="28" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#f8fafc">Final Deliverables &amp; Evaluation Criteria</text>
+      <text x="16" y="52" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">✓ Hardware Working Prototype &amp; Modular Enclosure</text>
+      <text x="16" y="72" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">✓ Capstone Thesis, Plagiarism Clearance &amp; IEEE Paper Draft</text>
+    </g>
+  </g>
+
+  <!-- Right: Career Launch & Placement Pathways -->
+  <g transform="translate(620, 45)">
+    <rect width="520" height="310" rx="10" fill="#070f20" stroke="#10b981" stroke-width="2" />
+    <rect width="520" height="40" rx="10" fill="#063e2c" />
+    <text x="24" y="26" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#34d399">CAREER LAUNCH &amp; HIGHER STUDIES CONVERSION</text>
+
+    <!-- 4 Achievement Cards -->
+    <g transform="translate(24, 60)">
+      <!-- Core Electronics & Embedded Systems -->
+      <rect x="0" y="0" width="220" height="105" rx="8" fill="#0b172e" stroke="#334155" />
+      <text x="16" y="28" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#00d2ff">Embedded &amp; VLSI</text>
+      <text x="16" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94a3b8">Firmware Engineer</text>
+      <text x="16" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94a3b8">IoT Systems Architect</text>
+      <text x="16" y="90" font-family="'JetBrains Mono', monospace" font-size="10" fill="#10b981">TI, Intel, Qualcomm, Bosch</text>
+
+      <!-- Industrial Automation -->
+      <rect x="250" y="0" width="220" height="105" rx="8" fill="#0b172e" stroke="#334155" />
+      <text x="266" y="28" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#38bdf8">Industrial Automation</text>
+      <text x="266" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94a3b8">PLC/SCADA Engineer</text>
+      <text x="266" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94a3b8">DCS Commissioning Lead</text>
+      <text x="266" y="90" font-family="'JetBrains Mono', monospace" font-size="10" fill="#10b981">Siemens, ABB, Honeywell, Yokogawa</text>
+
+      <!-- GATE & M.Tech -->
+      <rect x="0" y="125" width="220" height="105" rx="8" fill="#0b172e" stroke="#334155" />
+      <text x="16" y="153" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#f59e0b">GATE IN / EE / EC</text>
+      <text x="16" y="175" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94a3b8">M.Tech at Top IITs / IISc</text>
+      <text x="16" y="195" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94a3b8">Control, Sensor Tech, AI</text>
+      <text x="16" y="215" font-family="'JetBrains Mono', monospace" font-size="10" fill="#f59e0b">AIR &lt; 300 Target</text>
+
+      <!-- PSUs & Research -->
+      <rect x="250" y="125" width="220" height="105" rx="8" fill="#0b172e" stroke="#334155" />
+      <text x="266" y="153" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#a855f7">PSUs &amp; Government</text>
+      <text x="266" y="175" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94a3b8">Executive Trainee / Scientist</text>
+      <text x="266" y="195" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#94a3b8">BARC, ISRO, DRDO, IOCL</text>
+      <text x="266" y="215" font-family="'JetBrains Mono', monospace" font-size="10" fill="#c084fc">Central Pay Matrix Level 10</text>
+    </g>
+  </g>
+</svg>
+

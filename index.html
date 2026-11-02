@@ -1,0 +1,2883 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AEIE Career Navigator (2026-2030): Full-Stack Career Roadmap & Engineering Dashboard for B.E. Applied Electronics and Instrumentation Engineering at UIT Burdwan.">
+  <meta name="keywords" content="AEIE, UIT Burdwan, Applied Electronics and Instrumentation Engineering, Career Navigator, 2026-2030, Embedded Systems, Industrial Automation, GATE, Core Electronics, PLC SCADA">
+  <meta name="author" content="Department of AEIE, UIT Burdwan">
+  <title>AEIE Career Navigator | UIT Burdwan (2026–2030)</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans for UI, Space Grotesk for Headings, JetBrains Mono for Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Chart.js for Semester & Skill Visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Website Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="alternate icon" href="assets/favicon.svg">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================= -->
+  <!-- 1. NAVIGATION BAR WITH AUTH & THEME TOGGLE                                -->
+  <!-- ========================================================================= -->
+  <header class="navbar-wrapper" id="top">
+    <nav class="navbar container" aria-label="Main Navigation">
+      <a href="#hero" class="brand-logo" aria-label="AEIE Career Navigator Home">
+        <div class="logo-icon-box">
+          <img src="assets/favicon.svg" alt="AEIE Icon" class="brand-logo-img" width="34" height="34">
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-main"><strong class="logo-highlight">AEIE</strong> CAREER NAVIGATOR</span>
+          <span class="logo-sub">UIT BURDWAN • BATCH 2026–2030</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#roadmap" class="nav-link">4-Year Roadmap</a></li>
+        <li><a href="#analytics" class="nav-link">Analytics</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#careers" class="nav-link">Career Paths</a></li>
+        <li><a href="#gate" class="nav-link">GATE & Higher Studies</a></li>
+        <li><a href="#internships" class="nav-link">Internships</a></li>
+        <li><a href="#resources" class="nav-link">Resources</a></li>
+        <li><a href="#about" class="nav-link">About / Contact</a></li>
+      </ul>
+
+      <!-- Action Pill, Theme Toggle, Auth Button & Mobile Toggle -->
+      <div class="nav-actions">
+        <!-- Theme Toggle (Light / Dark) -->
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light and dark mode" title="Switch Theme">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light"></i>
+        </button>
+
+        <!-- Live Progress Pill -->
+        <a href="#tracker" class="nav-progress-badge" title="View Progress Dashboard">
+          <i data-lucide="check-circle-2" class="mini-icon"></i>
+          <span class="nav-progress-text">Progress: <strong id="nav-progress-percent">0%</strong></span>
+        </a>
+
+        <!-- Automatic Progress Cloud Save Indicator -->
+        <div class="save-status-badge saved" id="save-status-indicator" title="Automatic Cloud Sync Status" aria-live="polite">
+          <i data-lucide="check" class="save-status-icon" id="save-status-icon"></i>
+          <span class="save-status-label" id="save-status-label">Saved</span>
+        </div>
+
+        <!-- User Authentication State -->
+        <div class="auth-btn-wrapper" id="auth-container">
+          <button class="btn btn-outline-sm btn-auth" id="btn-open-auth">
+            <i data-lucide="user" class="btn-icon-sm"></i>
+            <span id="auth-button-text">Sign In</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i data-lucide="menu" id="menu-icon"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========================================================================= -->
+    <!-- 2. HERO / LANDING SECTION                                                 -->
+    <!-- ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="hero-glow-circle circle-1" aria-hidden="true"></div>
+      <div class="hero-glow-circle circle-2" aria-hidden="true"></div>
+      <div class="hero-grid-pattern" aria-hidden="true"></div>
+
+      <div class="container hero-container">
+        <!-- Institution & Department Meta Pill -->
+        <div class="institution-badge animate-fade-in">
+          <span class="pulse-indicator"></span>
+          <img src="assets/favicon.svg" alt="AEIE Icon" class="mini-logo-icon" width="22" height="22">
+          <span>B.E. Applied Electronics &amp; Instrumentation Engineering • UIT Burdwan</span>
+          <span class="badge-pill">2026–2030</span>
+        </div>
+
+        <!-- Main Title & Punchy Subtitle -->
+        <h1 class="hero-title animate-fade-in-up">
+          <span class="hero-title-prefix">AEIE CAREER NAVIGATOR</span> <br>
+          <span class="text-gradient">Plan Your Skills. Build Your Future.</span>
+        </h1>
+        <p class="hero-subtitle animate-fade-in-up delay-1">
+          The Full-Stack Engineering Roadmap for UIT Burdwan Undergraduates (2026–2030)
+        </p>
+
+        <!-- Academic Context Description -->
+        <p class="hero-description animate-fade-in-up delay-2">
+          A definitive career and technical planning platform designed specifically for students of 
+          <strong>Applied Electronics and Instrumentation Engineering (AEIE)</strong> at the 
+          <strong>University Institute of Technology (UIT), The University of Burdwan</strong>. 
+          Master circuit analysis, microcontrollers, PLC/SCADA automation, Python data telemetry, and GATE engineering 
+          with cloud-synced progress tracking.
+        </p>
+
+        <!-- Hero Action Buttons -->
+        <div class="hero-cta-group animate-fade-in-up delay-3">
+          <a href="#roadmap" class="btn btn-primary">
+            <i data-lucide="map" class="btn-icon"></i>
+            <span>Explore 4-Year Roadmap</span>
+          </a>
+          <a href="#analytics" class="btn btn-secondary">
+            <i data-lucide="bar-chart-3" class="btn-icon"></i>
+            <span>Progress Analytics</span>
+          </a>
+          <button class="btn btn-outline" id="hero-btn-profile">
+            <i data-lucide="user-check" class="btn-icon"></i>
+            <span>Personal Dashboard</span>
+          </button>
+          <button class="btn btn-outline" id="btn-download-pdf-hero" title="Download printable PDF of roadmap">
+            <i data-lucide="download" class="btn-icon"></i>
+            <span>Download Roadmap (PDF)</span>
+          </button>
+        </div>
+
+        <!-- Quick Metrics 4-Grid -->
+        <div class="hero-metrics-grid animate-fade-in-up delay-4">
+          <div class="metric-card">
+            <div class="metric-icon-box blue">
+              <i data-lucide="calendar"></i>
+            </div>
+            <div class="metric-data">
+              <span class="metric-number">4 Years</span>
+              <span class="metric-label">8 Semesters of Calibrated Training</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon-box cyan">
+              <i data-lucide="layers"></i>
+            </div>
+            <div class="metric-data">
+              <span class="metric-number">38 Core Topics</span>
+              <span class="metric-label">Circuits, Sensors, Signals & Control</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon-box purple">
+              <i data-lucide="code-2"></i>
+            </div>
+            <div class="metric-data">
+              <span class="metric-number">6+ Projects</span>
+              <span class="metric-label">Embedded, IIoT & GUI Prototypes</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon-box emerald">
+              <i data-lucide="compass"></i>
+            </div>
+            <div class="metric-data">
+              <span class="metric-number">8 Pathways</span>
+              <span class="metric-label">Core, Embedded, Automation & GATE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real-Time Progress Overview Card -->
+        <div class="hero-live-tracker card">
+          <div class="tracker-header">
+            <div class="tracker-title-group">
+              <i data-lucide="activity" class="tracker-icon"></i>
+              <div>
+                <h2 class="tracker-heading">Undergraduate Journey Progress Tracker</h2>
+                <p class="tracker-sub" id="tracker-sync-status">Status: Guest Mode (Saved Locally). Sign in to sync with cloud.</p>
+              </div>
+            </div>
+            <div class="tracker-stats-box">
+              <span class="tracker-percentage" id="hero-progress-percentage">0%</span>
+              <span class="tracker-count" id="hero-progress-count">0 / 44 Completed</span>
+            </div>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="hero-progress-bar" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- AEIE Cyber-Physical Engineering Closed-Loop Architecture Card -->
+        <div class="hero-arch-wrapper card animate-fade-in-up delay-5">
+          <div class="arch-card-header">
+            <span class="arch-tag"><img src="assets/favicon.svg" alt="AEIE" width="18" height="18" class="mini-icon"> AEIE CORE PIPELINE</span>
+            <span class="arch-title">Closed-Loop Cyber-Physical Engineering Architecture (2026–2030)</span>
+          </div>
+          <img src="assets/hero-diagram.svg" alt="AEIE Cyber-Physical Engineering Architecture" class="hero-arch-diagram" width="900" height="240" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. PERSONAL USER DASHBOARD (EXPANDABLE MODAL / DRAWER)                    -->
+    <!-- ========================================================================= -->
+    <section class="personal-dashboard-section" id="personal-dashboard-section" style="display: none;">
+      <div class="container">
+        <div class="card personal-dash-card">
+          <div class="pd-header">
+            <div class="pd-user-info">
+              <div class="pd-avatar" id="pd-avatar-initials">SB</div>
+              <div>
+                <h3 class="pd-name" id="pd-user-name">Student Name</h3>
+                <p class="pd-email" id="pd-user-email">student@uit.buruniv.ac.in</p>
+                <div class="pd-badge-row">
+                  <span class="chip chip-blue" id="pd-chip-batch">Batch 2026–2030</span>
+                  <span class="chip chip-cyan" id="pd-chip-sem">Semester 1</span>
+                  <span class="chip chip-emerald" id="pd-chip-goal">Core Electronics</span>
+                </div>
+              </div>
+            </div>
+            <div class="pd-actions">
+              <button type="button" class="btn btn-outline-sm" id="btn-open-settings">
+                <i data-lucide="settings" class="btn-icon-sm"></i> Settings
+              </button>
+              <button type="button" class="btn btn-outline-sm" id="btn-sync-cloud">
+                <i data-lucide="cloud-upload" class="btn-icon-sm"></i> Sync to Cloud
+              </button>
+              <button type="button" class="btn btn-outline-sm" id="btn-sign-out">
+                <i data-lucide="log-out" class="btn-icon-sm"></i> Sign Out
+              </button>
+              <button type="button" class="btn-close-dash" id="btn-close-dash" aria-label="Close Dashboard">
+                <i data-lucide="x"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Expandable Student Profile Settings Drawer -->
+          <div class="pd-settings-panel" id="pd-settings-panel" style="display: none;">
+            <div class="settings-panel-header">
+              <h4 class="settings-title"><i data-lucide="sliders"></i> Student Profile &amp; Dashboard Settings</h4>
+              <p class="settings-subtitle">Customize your academic track, semester standing, and target CGPA. Synced across your devices.</p>
+            </div>
+            <div class="settings-grid">
+              <div class="form-group">
+                <label for="pd-setting-sem">Current Semester Standing</label>
+                <select id="pd-setting-sem" class="settings-select">
+                  <option value="1">Semester 1 (Year 1 Foundation)</option>
+                  <option value="2">Semester 2 (Year 1 Foundation)</option>
+                  <option value="3">Semester 3 (Year 2 Core Skills)</option>
+                  <option value="4">Semester 4 (Year 2 Instrumentation)</option>
+                  <option value="5">Semester 5 (Year 3 Specialization)</option>
+                  <option value="6">Semester 6 (Year 3 Advanced &amp; GATE)</option>
+                  <option value="7">Semester 7 (Year 4 Capstone &amp; Placements)</option>
+                  <option value="8">Semester 8 (Year 4 Career Launch)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="pd-setting-goal">Primary Engineering Career Track</label>
+                <select id="pd-setting-goal" class="settings-select">
+                  <option value="Core Electronics &amp; Embedded">Core Electronics &amp; Embedded Systems</option>
+                  <option value="Industrial Automation &amp; PLC">Industrial Automation, PLC &amp; SCADA</option>
+                  <option value="GATE &amp; Premier M.Tech">GATE IN/EE &amp; Premier M.Tech (IITs/IISc)</option>
+                  <option value="Software &amp; Systems Dev">Software &amp; Systems Engineering</option>
+                  <option value="PSU &amp; Govt. Engineering">PSUs &amp; Government Engineering (IOCL, NTPC, ISRO)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="pd-setting-cgpa">Target Graduation CGPA</label>
+                <input type="number" id="pd-setting-cgpa" class="settings-input" min="6.0" max="10.0" step="0.1" value="8.5" placeholder="8.5">
+              </div>
+            </div>
+            <div class="settings-actions">
+              <button type="button" class="btn btn-primary btn-sm" id="btn-save-settings">
+                <i data-lucide="check"></i> Save Settings
+              </button>
+              <button type="button" class="btn btn-outline-sm" id="btn-cancel-settings">
+                Cancel
+              </button>
+            </div>
+          </div>
+
+          <div class="pd-grid">
+            <div class="pd-stat-box">
+              <span class="pd-stat-num" id="pd-stat-overall">0%</span>
+              <span class="pd-stat-label">Total Roadmap Completion</span>
+            </div>
+            <div class="pd-stat-box">
+              <span class="pd-stat-num" id="pd-stat-completed-tasks">0</span>
+              <span class="pd-stat-label">Completed Tasks & Projects</span>
+            </div>
+            <div class="pd-stat-box">
+              <span class="pd-stat-num" id="pd-stat-pending-tasks">44</span>
+              <span class="pd-stat-label">Pending Milestones</span>
+            </div>
+            <div class="pd-stat-box">
+              <span class="pd-stat-num" id="pd-stat-projects-done">0 / 6</span>
+              <span class="pd-stat-label">Projects Built</span>
+            </div>
+          </div>
+
+          <div class="pd-recent-milestones">
+            <h4 class="pd-subheading"><i data-lucide="award"></i> Personalized Career Milestones</h4>
+            <div class="milestones-timeline-grid" id="pd-milestones-list">
+              <div class="milestone-item-card">
+                <span class="m-badge">Current Focus</span>
+                <h5>First-Year Foundation & Programming Mastery</h5>
+                <p>Master C pointers, memory allocation, and push regular code to GitHub.</p>
+              </div>
+              <div class="milestone-item-card">
+                <span class="m-badge">Next Target</span>
+                <h5>Microcontrollers & Sensors Interfacing (Year 2)</h5>
+                <p>Work on Arduino breadboard experiments, Wokwi simulations, and Op-Amp filters.</p>
+              </div>
+              <div class="milestone-item-card">
+                <span class="m-badge">Upcoming</span>
+                <h5>AICTE Industrial Internship (Year 3)</h5>
+                <p>Apply for core industrial plant training in Durgapur/Asansol or PSUs.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Personal Study Notes & Strategy Card -->
+          <div class="pd-notes-box">
+            <div class="pd-notes-header">
+              <div class="pd-notes-title-group">
+                <div class="pd-notes-icon-wrapper">
+                  <i data-lucide="notebook-pen" class="pd-notes-icon"></i>
+                </div>
+                <div>
+                  <h4 class="pd-subheading" style="margin-bottom: 0.2rem;">Personal Study Notes &amp; Semester Goals</h4>
+                  <p class="pd-notes-desc">Record your current semester targets, formulas, project ideas, or revision reminders. Automatically saved to your account in real time.</p>
+                </div>
+              </div>
+              <div class="pd-notes-actions">
+                <span class="notes-status-badge" id="notes-status-badge"><i data-lucide="check-circle" class="mini-icon"></i> Ready</span>
+                <button type="button" class="btn btn-outline-sm" id="btn-save-notes">
+                  <i data-lucide="save" class="btn-icon-sm"></i> Save Notes
+                </button>
+              </div>
+            </div>
+            <textarea id="pd-personal-notes" class="pd-notes-textarea" placeholder="Example: Target 8.5+ CGPA. Revise Op-Amp 741 frequency response, build IoT sensor logger on Wokwi, practice 20 GATE Instrumentation PYQs each weekend..." rows="4" maxlength="5000"></textarea>
+            <div class="pd-notes-footer">
+              <span class="notes-char-info"><span id="notes-char-count">0</span> / 5000 characters</span>
+              <span class="notes-secure-info"><i data-lucide="lock" class="mini-icon"></i> Private &amp; encrypted per user ID</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. FOUR-YEAR INTERACTIVE TIMELINE OVERVIEW                                -->
+    <!-- ========================================================================= -->
+    <section class="timeline-overview-section" id="timeline-overview">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i data-lucide="milestone"></i>
+            <span>CHRONOLOGICAL MILESTONES</span>
+          </div>
+          <h2 class="section-title">The Four-Year Engineering Timeline (2026–2030)</h2>
+          <p class="section-subtitle">
+            A calibrated trajectory taking you from fundamental sciences to industrial-grade instrumentation and deployment.
+          </p>
+        </div>
+
+        <!-- Interactive Timeline Track -->
+        <div class="interactive-timeline">
+          <!-- Timeline Node 1 -->
+          <div class="timeline-step active" data-year-target="year-1">
+            <button class="step-btn" type="button" aria-controls="year-1">
+              <span class="step-badge">2026 – 2027</span>
+              <span class="step-dot"><i data-lucide="compass"></i></span>
+              <h3 class="step-title">Year 1: Foundation</h3>
+              <p class="step-desc">Mathematics, Physics, C Programming & Python Basics</p>
+            </button>
+          </div>
+
+          <!-- Timeline Node 2 -->
+          <div class="timeline-step" data-year-target="year-2">
+            <button class="step-btn" type="button" aria-controls="year-2">
+              <span class="step-badge">2027 – 2028</span>
+              <span class="step-dot"><i data-lucide="circuit-board"></i></span>
+              <h3 class="step-title">Year 2: Skill Development</h3>
+              <p class="step-desc">Sensors, Analog/Digital, Microcontrollers & Arduino</p>
+            </button>
+          </div>
+
+          <!-- Timeline Node 3 -->
+          <div class="timeline-step" data-year-target="year-3">
+            <button class="step-btn" type="button" aria-controls="year-3">
+              <span class="step-badge">2028 – 2029</span>
+              <span class="step-dot"><i data-lucide="factory"></i></span>
+              <h3 class="step-title">Year 3: Specialization</h3>
+              <p class="step-desc">PLC, SCADA, Industrial IoT, Embedded C & GATE Prep</p>
+            </button>
+          </div>
+
+          <!-- Timeline Node 4 -->
+          <div class="timeline-step" data-year-target="year-4">
+            <button class="step-btn" type="button" aria-controls="year-4">
+              <span class="step-badge">2029 – 2030</span>
+              <span class="step-dot"><i data-lucide="rocket"></i></span>
+              <h3 class="step-title">Year 4: Career Launch</h3>
+              <p class="step-desc">Capstone Project, Placements, GATE & Higher Studies</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. ANALYTICS & CHARTS DASHBOARD (CHART.JS)                                -->
+    <!-- ========================================================================= -->
+    <section class="analytics-section" id="analytics">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i data-lucide="bar-chart-2"></i>
+            <span>PROGRESS VISUALIZATION</span>
+          </div>
+          <h2 class="section-title">Semester-wise & Skill Progress Analytics</h2>
+          <p class="section-subtitle">
+            Dynamic charts powered by Chart.js reflecting your real-time mastery across all 8 academic semesters and engineering skill pillars.
+          </p>
+        </div>
+
+        <div class="analytics-grid">
+          <!-- Semester Completion Bar Chart -->
+          <div class="card chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title"><i data-lucide="bar-chart-3"></i> Semester Completion Status (%)</h3>
+              <span class="chart-badge">8 Semesters</span>
+            </div>
+            <div class="chart-container">
+              <canvas id="semesterChart" aria-label="Bar chart showing semester-wise completion percentage"></canvas>
+            </div>
+          </div>
+
+          <!-- Skills Distribution Doughnut Chart -->
+          <div class="card chart-card">
+            <div class="chart-header">
+              <h3 class="chart-title"><i data-lucide="pie-chart"></i> Engineering Skill Pillars</h3>
+              <span class="chart-badge">4 Domains</span>
+            </div>
+            <div class="chart-container">
+              <canvas id="skillsChart" aria-label="Doughnut chart showing distribution of engineering skills"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. DETAILED 4-YEAR ROADMAP (SEMESTERS 1 TO 8)                             -->
+    <!-- ========================================================================= -->
+    <section class="roadmap-section" id="roadmap">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i data-lucide="book-open"></i>
+            <span>CURRICULUM & SKILLS BLUEPRINT</span>
+          </div>
+          <div class="header-with-actions">
+            <div>
+              <h2 class="section-title">Four-Year Academic & Skills Roadmap</h2>
+              <p class="section-subtitle">
+                Expand semesters, check off completed subjects, view core AEIE skills, programming stacks, internship prep, and practical project deliverables.
+              </p>
+            </div>
+            <!-- Quick Expand/Collapse, Search & Download Toolbar -->
+            <div class="roadmap-toolbar">
+              <div class="search-box">
+                <i data-lucide="search" class="search-icon"></i>
+                <input type="text" id="roadmap-search" placeholder="Search subjects, skills, projects..." aria-label="Search roadmap items">
+                <button type="button" class="btn-search-clear" id="btn-clear-roadmap-search" aria-label="Clear Search" title="Clear Search" style="display: none;"><i data-lucide="x"></i></button>
+              </div>
+              <button class="btn btn-outline-sm" id="btn-expand-all">
+                <i data-lucide="chevrons-down" class="btn-icon-sm"></i> Expand All
+              </button>
+              <button class="btn btn-outline-sm" id="btn-collapse-all">
+                <i data-lucide="chevrons-up" class="btn-icon-sm"></i> Collapse All
+              </button>
+              <button class="btn btn-outline-sm" id="btn-download-pdf" title="Download printable PDF of roadmap">
+                <i data-lucide="printer" class="btn-icon-sm"></i> Print / PDF
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- =================================================================== -->
+        <!-- YEAR 1: FOUNDATION (2026–2027)                                      -->
+        <!-- =================================================================== -->
+        <article class="year-block" id="year-1">
+          <header class="year-header">
+            <div class="year-header-info">
+              <span class="year-meta-pill">ACADEMIC YEAR 1 • 2026–2027</span>
+              <h3 class="year-heading">Year 1: Foundation</h3>
+              <p class="year-summary">
+                Cultivate core mathematical rigor, physical intuition of electrical quantities, programming logic in C and Python, and version control discipline with Git and GitHub.
+              </p>
+            </div>
+            <div class="year-progress-wrapper">
+              <span class="year-progress-label">Year 1 Progress</span>
+              <div class="year-progress-bar">
+                <div class="year-progress-fill" id="progress-year-1" style="width: 0%;"></div>
+              </div>
+              <span class="year-progress-text" id="progress-text-year-1">0%</span>
+            </div>
+          </header>
+
+          <div class="year-media-banner">
+            <img src="assets/year1-foundation.svg" 
+                 alt="Year 1: Electronics, C Programming &amp; Lab Workspace" 
+                 class="year-banner-img"
+                 loading="lazy">
+            <div class="year-banner-overlay">
+              <div class="banner-badge">
+                <i data-lucide="terminal"></i>
+                <span>Objective: Strong Scientific Fundamentals & Coding Discipline</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="semesters-grid">
+            <!-- Semester 1 Card -->
+            <div class="semester-card card" id="sem-card-1">
+              <div class="semester-header" role="button" tabindex="0" aria-expanded="true">
+                <div class="sem-title-wrap">
+                  <span class="sem-badge">SEMESTER 1</span>
+                  <h4 class="sem-title">Foundations of Engineering & C Programming</h4>
+                </div>
+                <div class="sem-toggle-icon">
+                  <i data-lucide="chevron-down"></i>
+                </div>
+              </div>
+              <div class="semester-content">
+                <p class="sem-intro">Build analytical problem-solving skills, circuit essentials, and structured procedural coding.</p>
+
+                <!-- Core Subjects Checklist -->
+                <div class="sem-section-block">
+                  <h5 class="sem-block-heading"><i data-lucide="check-square"></i> Core Subjects & Concepts</h5>
+                  <ul class="subject-checklist" data-sem="sem-1">
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y1-s1-1" data-task-id="y1-s1-1" data-year="year-1">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Engineering Mathematics I:</strong> Calculus, Linear Algebra, Matrix Operations, Differential Equations
+                        </span>
+                      </label>
+                      <span class="tag tag-math">Core Theory</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y1-s1-2" data-task-id="y1-s1-2" data-year="year-1">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Engineering Physics:</strong> Optics, Electromagnetism, Quantum Mechanics, Semiconductor Fundamentals
+                        </span>
+                      </label>
+                      <span class="tag tag-physics">Lab + Theory</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y1-s1-3" data-task-id="y1-s1-3" data-year="year-1">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Basic Electrical Engineering:</strong> KCL, KVL, AC Circuits, Transformers, DC Machines
+                        </span>
+                      </label>
+                      <span class="tag tag-ee">AEIE Pillar</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y1-s1-4" data-task-id="y1-s1-4" data-year="year-1">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>C Programming:</strong> Variables, Loops, Functions, Pointers, Arrays, Structs, File Handling
+                        </span>
+                      </label>
+                      <span class="tag tag-code">Crucial for Embedded</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y1-s1-5" data-task-id="y1-s1-5" data-year="year-1">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Git and GitHub:</strong> Repositories, Commits, Branches, Pull Requests, Markdown Documentation
+                        </span>
+                      </label>
+                      <span class="tag tag-tool">Developer Tool</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Comprehensive Skills Breakdown -->
+                <div class="skills-breakdown-row">
+                  <div class="skills-cell">
+                    <h6><i data-lucide="cpu"></i> Technical Skills</h6>
+                    <p>Circuit Analysis, Breadboard Prototyping, Multimeter & Power Supply Usage</p>
+                  </div>
+                  <div class="skills-cell">
+                    <h6><i data-lucide="code"></i> Programming</h6>
+                    <p>C Language (Pointers, Dynamic Memory, Structs), Git CLI & GitHub Workflows</p>
+                  </div>
+                  <div class="skills-cell">
+                    <h6><i data-lucide="activity"></i> AEIE Core</h6>
+                    <p>Kirchhoff Laws, AC Impedance, Magnetic Circuits & Semiconductor Doping</p>
+                  </div>
+                </div>
+
+                <!-- Internship Preparation & Career Milestones -->
+                <div class="internship-milestone-box">
+                  <div class="im-item">
+                    <strong><i data-lucide="briefcase"></i> Internship Prep:</strong> Set up a professional LinkedIn profile and push all C lab code to a clean GitHub portfolio repository.
+                  </div>
+                  <div class="im-item">
+                    <strong><i data-lucide="flag"></i> Career Milestone:</strong> Explore core electronics vs software engineering horizons; aim for first-semester CGPA &gt; 8.0.
+                  </div>
+                </div>
+
+                <div class="mentor-tip">
+                  <i data-lucide="lightbulb" class="tip-icon"></i>
+                  <span><strong>Mentor Advice:</strong> Master pointers and memory management in C during Sem 1; these concepts form the backbone of embedded microcontrollers in Years 2 and 3.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Semester 2 Card -->
+            <div class="semester-card card" id="sem-card-2">
+              <div class="semester-header" role="button" tabindex="0" aria-expanded="true">
+                <div class="sem-title-wrap">
+                  <span class="sem-badge">SEMESTER 2</span>
+                  <h4 class="sem-title">Electronics, Circuit Analysis & Modern Scripting</h4>
+                </div>
+                <div class="sem-toggle-icon">
+                  <i data-lucide="chevron-down"></i>
+                </div>
+              </div>
+              <div class="semester-content">
+                <p class="sem-intro">Transition into electronics hardware principles, circuit theorems, and rapid automation with Python.</p>
+
+                <!-- Core Subjects Checklist -->
+                <div class="sem-section-block">
+                  <h5 class="sem-block-heading"><i data-lucide="check-square"></i> Core Subjects & Concepts</h5>
+                  <ul class="subject-checklist" data-sem="sem-2">
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y1-s2-1" data-task-id="y1-s2-1" data-year="year-1">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Python Fundamentals:</strong> Data structures, Object-Oriented Programming, file I/O, pip packages
+                        </span>
+                      </label>
+                      <span class="tag tag-code">Versatile Skill</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y1-s2-2" data-task-id="y1-s2-2" data-year="year-1">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Basic Electronics:</strong> PN Junction Diodes, Zener regulation, BJT biasing, FET, Op-Amp introduction
+                        </span>
+                      </label>
+                      <span class="tag tag-ee">AEIE Pillar</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y1-s2-3" data-task-id="y1-s2-3" data-year="year-1">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Circuit Analysis:</strong> Thevenin, Norton, Superposition, Maximum Power Transfer, RLC transients
+                        </span>
+                      </label>
+                      <span class="tag tag-math">GATE Essential</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y1-s2-4" data-task-id="y1-s2-4" data-year="year-1">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>HTML, CSS & JavaScript Basics:</strong> Web layout, DOM manipulation, creating project portfolio web pages
+                        </span>
+                      </label>
+                      <span class="tag tag-tool">Presentation & UI</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Comprehensive Skills Breakdown -->
+                <div class="skills-breakdown-row">
+                  <div class="skills-cell">
+                    <h6><i data-lucide="cpu"></i> Technical Skills</h6>
+                    <p>Diode & BJT characteristic testing, Oscilloscope waveform probing, LTspice circuit simulation</p>
+                  </div>
+                  <div class="skills-cell">
+                    <h6><i data-lucide="code"></i> Programming</h6>
+                    <p>Python 3 scripting (OOP, CSV logging), Frontend Web fundamentals (HTML5/CSS3/JS)</p>
+                  </div>
+                  <div class="skills-cell">
+                    <h6><i data-lucide="activity"></i> AEIE Core</h6>
+                    <p>Small-signal transistor models, transient time constants, Thevenin equivalent resistances</p>
+                  </div>
+                </div>
+
+                <!-- Internship Preparation & Career Milestones -->
+                <div class="internship-milestone-box">
+                  <div class="im-item">
+                    <strong><i data-lucide="briefcase"></i> Internship Prep:</strong> Build and host your personal student portfolio on GitHub Pages; connect with senior UIT Burdwan AEIE alumni.
+                  </div>
+                  <div class="im-item">
+                    <strong><i data-lucide="flag"></i> Career Milestone:</strong> Publish your first open-source Python telemetry script on GitHub with sample CSV datasets.
+                  </div>
+                </div>
+
+                <div class="mentor-tip">
+                  <i data-lucide="lightbulb" class="tip-icon"></i>
+                  <span><strong>Mentor Advice:</strong> Practice solving circuit networks with pencil and paper, then verify with circuit simulation tools like Falstad or LTspice.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Year 1 Projects -->
+          <div class="projects-section-block">
+            <h4 class="projects-block-title">
+              <i data-lucide="folder-git-2"></i> Year 1 Portfolio Projects
+            </h4>
+            <div class="projects-grid">
+              <!-- Project 1 -->
+              <div class="project-card card" id="proj-card-y1-1">
+                <div class="project-header">
+                  <div class="project-tag-wrap">
+                    <span class="project-type-badge">Project 1 • C Language</span>
+                    <label class="custom-checkbox project-checkbox-wrap">
+                      <input type="checkbox" id="proj-y1-1" data-task-id="proj-y1-1" data-year="year-1">
+                      <span class="checkbox-box"><i data-lucide="check"></i></span>
+                      <span class="project-status-label">Mark Completed</span>
+                    </label>
+                  </div>
+                  <h5 class="project-name">Student Management System using C</h5>
+                </div>
+                <p class="project-description">
+                  Build a modular command-line database system using C. Implement file handling to store student enrollment details, roll numbers, marks, and GPA computations with structured memory management.
+                </p>
+                <div class="project-skills">
+                  <span class="skill-chip">C Programming</span>
+                  <span class="skill-chip">File I/O</span>
+                  <span class="skill-chip">Structs & Pointers</span>
+                  <span class="skill-chip">CLI Architecture</span>
+                  <span class="skill-chip">Git / GitHub</span>
+                </div>
+                <div class="project-deliverables">
+                  <strong>Key Deliverable:</strong> Clean GitHub repo with modular `.c` and `.h` files, structured Makefile or GCC build instructions, and sample dataset persistence.
+                </div>
+              </div>
+
+              <!-- Project 2 -->
+              <div class="project-card card" id="proj-card-y1-2">
+                <div class="project-header">
+                  <div class="project-tag-wrap">
+                    <span class="project-type-badge">Project 2 • Python Scripting</span>
+                    <label class="custom-checkbox project-checkbox-wrap">
+                      <input type="checkbox" id="proj-y1-2" data-task-id="proj-y1-2" data-year="year-1">
+                      <span class="checkbox-box"><i data-lucide="check"></i></span>
+                      <span class="project-status-label">Mark Completed</span>
+                    </label>
+                  </div>
+                  <h5 class="project-name">Python Sensor Data Logger</h5>
+                </div>
+                <p class="project-description">
+                  Develop a Python script that reads simulated or live USB/Serial telemetry (simulated temperature, voltage, or pressure), writes timestamped logs to CSV files, and visualizes real-time plots using Matplotlib.
+                </p>
+                <div class="project-skills">
+                  <span class="skill-chip">Python 3</span>
+                  <span class="skill-chip">PySerial</span>
+                  <span class="skill-chip">CSV Handling</span>
+                  <span class="skill-chip">Matplotlib</span>
+                  <span class="skill-chip">Automation</span>
+                </div>
+                <div class="project-deliverables">
+                  <strong>Key Deliverable:</strong> Automated logging script with outlier threshold alarms and dynamic time-series charts exported to PNG.
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- =================================================================== -->
+        <!-- YEAR 2: SKILL DEVELOPMENT (2027–2028)                               -->
+        <!-- =================================================================== -->
+        <article class="year-block" id="year-2">
+          <header class="year-header">
+            <div class="year-header-info">
+              <span class="year-meta-pill">ACADEMIC YEAR 2 • 2027–2028</span>
+              <h3 class="year-heading">Year 2: Skill Development</h3>
+              <p class="year-summary">
+                Deepen hardware mastery across analog and digital ICs, signal analysis, sensor interfacing, microcontroller architecture (8051/AVR/PIC), and software modeling with C++ and Python data tools.
+              </p>
+            </div>
+            <div class="year-progress-wrapper">
+              <span class="year-progress-label">Year 2 Progress</span>
+              <div class="year-progress-bar">
+                <div class="year-progress-fill" id="progress-year-2" style="width: 0%;"></div>
+              </div>
+              <span class="year-progress-text" id="progress-text-year-2">0%</span>
+            </div>
+          </header>
+
+          <div class="year-media-banner">
+            <img src="assets/year2-embedded.svg" 
+                 alt="Year 2: Microcontroller Prototyping, Oscilloscope &amp; Sensor Interfacing" 
+                 class="year-banner-img"
+                 loading="lazy">
+            <div class="year-banner-overlay">
+              <div class="banner-badge">
+                <i data-lucide="cpu"></i>
+                <span>Objective: Hardware Interfacing, Signals & Instrumentation Essentials</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="semesters-grid">
+            <!-- Semester 3 Card -->
+            <div class="semester-card card" id="sem-card-3">
+              <div class="semester-header" role="button" tabindex="0" aria-expanded="true">
+                <div class="sem-title-wrap">
+                  <span class="sem-badge">SEMESTER 3</span>
+                  <h4 class="sem-title">Electronics Core, Signals & Object-Oriented Logic</h4>
+                </div>
+                <div class="sem-toggle-icon">
+                  <i data-lucide="chevron-down"></i>
+                </div>
+              </div>
+              <div class="semester-content">
+                <p class="sem-intro">Master foundational hardware circuits, mathematical transforms for signals, and object-oriented algorithms.</p>
+
+                <!-- Core Subjects Checklist -->
+                <div class="sem-section-block">
+                  <h5 class="sem-block-heading"><i data-lucide="check-square"></i> Core Subjects & Concepts</h5>
+                  <ul class="subject-checklist" data-sem="sem-3">
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y2-s3-1" data-task-id="y2-s3-1" data-year="year-2">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Analog Electronics:</strong> Op-Amp circuits, differential amplifiers, filters (Active/Passive), oscillators
+                        </span>
+                      </label>
+                      <span class="tag tag-ee">Core Instrumentation</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y2-s3-2" data-task-id="y2-s3-2" data-year="year-2">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Digital Electronics:</strong> Boolean logic, K-maps, multiplexers, flip-flops, counters, shift registers
+                        </span>
+                      </label>
+                      <span class="tag tag-ee">Hardware Core</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y2-s3-3" data-task-id="y2-s3-3" data-year="year-2">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Network Theory:</strong> Graph theory, two-port networks, Laplace transforms in circuits, resonant circuits
+                        </span>
+                      </label>
+                      <span class="tag tag-math">GATE Core</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y2-s3-4" data-task-id="y2-s3-4" data-year="year-2">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Signals and Systems:</strong> Continuous & discrete signals, LTI systems, Fourier analysis, Z-transform
+                        </span>
+                      </label>
+                      <span class="tag tag-math">Heavy Weightage</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y2-s3-5" data-task-id="y2-s3-5" data-year="year-2">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>C++ and Data Structures:</strong> OOP, Stacks, Queues, Linked Lists, Trees, Search/Sorting Algorithms
+                        </span>
+                      </label>
+                      <span class="tag tag-code">Software Ready</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y2-s3-6" data-task-id="y2-s3-6" data-year="year-2">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Arduino Basics:</strong> GPIO digital/analog pins, PWM control, timers, serial communication, Wokwi sim
+                        </span>
+                      </label>
+                      <span class="tag tag-tool">Prototyping</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Comprehensive Skills Breakdown -->
+                <div class="skills-breakdown-row">
+                  <div class="skills-cell">
+                    <h6><i data-lucide="cpu"></i> Technical Skills</h6>
+                    <p>Active filter tuning (Butterworth), 7400 series logic IC debugging, Wokwi virtual breadboarding</p>
+                  </div>
+                  <div class="skills-cell">
+                    <h6><i data-lucide="code"></i> Programming</h6>
+                    <p>C++ OOP & STL, Data Structures (Linked Lists, Binary Trees), Arduino C++ Framework</p>
+                  </div>
+                  <div class="skills-cell">
+                    <h6><i data-lucide="activity"></i> AEIE Core</h6>
+                    <p>Op-Amp CMRR & Slew Rates, Fourier & Laplace Transforms, Two-Port Network Synthesis</p>
+                  </div>
+                </div>
+
+                <!-- Internship Preparation & Career Milestones -->
+                <div class="internship-milestone-box">
+                  <div class="im-item">
+                    <strong><i data-lucide="briefcase"></i> Internship Prep:</strong> Prototype a sensor circuit on Wokwi and post demonstration recordings on LinkedIn; practice C++ DSA on LeetCode.
+                  </div>
+                  <div class="im-item">
+                    <strong><i data-lucide="flag"></i> Career Milestone:</strong> Build your first interactive microcontroller station with real-time serial telemetry.
+                  </div>
+                </div>
+
+                <div class="mentor-tip">
+                  <i data-lucide="lightbulb" class="tip-icon"></i>
+                  <span><strong>Mentor Advice:</strong> Don't just simulate Arduino code. Understand the register level (e.g. `DDRB`, `PORTB`) to prepare for microcontrollers in Sem 4.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Semester 4 Card -->
+            <div class="semester-card card" id="sem-card-4">
+              <div class="semester-header" role="button" tabindex="0" aria-expanded="true">
+                <div class="sem-title-wrap">
+                  <span class="sem-badge">SEMESTER 4</span>
+                  <h4 class="sem-title">Sensors, Microcontrollers & Control Systems</h4>
+                </div>
+                <div class="sem-toggle-icon">
+                  <i data-lucide="chevron-down"></i>
+                </div>
+              </div>
+              <div class="semester-content">
+                <p class="sem-intro">The core of AEIE begins: measurement science, feedback loops, microprocessor registers, and scientific data manipulation.</p>
+
+                <!-- Core Subjects Checklist -->
+                <div class="sem-section-block">
+                  <h5 class="sem-block-heading"><i data-lucide="check-square"></i> Core Subjects & Concepts</h5>
+                  <ul class="subject-checklist" data-sem="sem-4">
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y2-s4-1" data-task-id="y2-s4-1" data-year="year-2">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Measurements & Instrumentation:</strong> Error analysis, Bridges (Wheatstone, Maxwell), Transducers (RTD, Thermocouple, LVDT, Strain Gauges)
+                        </span>
+                      </label>
+                      <span class="tag tag-ee">AEIE Signature</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y2-s4-2" data-task-id="y2-s4-2" data-year="year-2">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Microprocessors and Microcontrollers:</strong> 8085/8086 architecture, 8051 pinout & instruction set, interrupts, timers
+                        </span>
+                      </label>
+                      <span class="tag tag-ee">Embedded Core</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y2-s4-3" data-task-id="y2-s4-3" data-year="year-2">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Control Systems:</strong> Transfer functions, block reduction, Routh-Hurwitz, Root Locus, Bode plots, Nyquist criterion
+                        </span>
+                      </label>
+                      <span class="tag tag-math">GATE IN/EE/EC</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y2-s4-4" data-task-id="y2-s4-4" data-year="year-2">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Python NumPy and Pandas:</strong> Array vectorized operations, data cleansing, signal filtering, statistical analytics
+                        </span>
+                      </label>
+                      <span class="tag tag-code">Data & Analytics</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y2-s4-5" data-task-id="y2-s4-5" data-year="year-2">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Sensor Interfacing:</strong> ADC conversion, signal conditioning (Instrumentation Amp AD620), I2C, SPI, UART buses
+                        </span>
+                      </label>
+                      <span class="tag tag-tool">Lab Practical</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Comprehensive Skills Breakdown -->
+                <div class="skills-breakdown-row">
+                  <div class="skills-cell">
+                    <h6><i data-lucide="cpu"></i> Technical Skills</h6>
+                    <p>Sensor calibration, AD620 instrumentation amplifier wiring, oscilloscope logic analysis</p>
+                  </div>
+                  <div class="skills-cell">
+                    <h6><i data-lucide="code"></i> Programming</h6>
+                    <p>Python NumPy and Pandas data wrangling, 8051 Embedded C/Assembly, MATLAB/Simulink Onramp</p>
+                  </div>
+                  <div class="skills-cell">
+                    <h6><i data-lucide="activity"></i> AEIE Core</h6>
+                    <p>Transducer sensitivity & linearity, root locus stability, Bode gain & phase margins</p>
+                  </div>
+                </div>
+
+                <!-- Internship Preparation & Career Milestones -->
+                <div class="internship-milestone-box">
+                  <div class="im-item">
+                    <strong><i data-lucide="briefcase"></i> Internship Prep:</strong> Register on the official AICTE Internship Portal; research core manufacturing and process plants in West Bengal.
+                  </div>
+                  <div class="im-item">
+                    <strong><i data-lucide="flag"></i> Career Milestone:</strong> Complete your virtual instrumentation dashboard and achieve an aggregate CGPA above 8.2 across Years 1 & 2.
+                  </div>
+                </div>
+
+                <div class="mentor-tip">
+                  <i data-lucide="lightbulb" class="tip-icon"></i>
+                  <span><strong>Mentor Advice:</strong> Master Bode Plots and Root Locus by practicing with MATLAB or Python Control Systems Library—vital for UIT exams and GATE.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Year 2 Projects -->
+          <div class="projects-section-block">
+            <h4 class="projects-block-title">
+              <i data-lucide="folder-git-2"></i> Year 2 Portfolio Projects
+            </h4>
+            <div class="projects-grid">
+              <!-- Project 3 -->
+              <div class="project-card card" id="proj-card-y2-1">
+                <div class="project-header">
+                  <div class="project-tag-wrap">
+                    <span class="project-type-badge">Project 3 • Embedded Instrumentation</span>
+                    <label class="custom-checkbox project-checkbox-wrap">
+                      <input type="checkbox" id="proj-y2-1" data-task-id="proj-y2-1" data-year="year-2">
+                      <span class="checkbox-box"><i data-lucide="check"></i></span>
+                      <span class="project-status-label">Mark Completed</span>
+                    </label>
+                  </div>
+                  <h5 class="project-name">Temperature Monitoring & Alert System</h5>
+                </div>
+                <p class="project-description">
+                  Design a physical or Wokwi-simulated microcontroller station using LM35/DHT22 or DS18B20 digital temperature sensors. Feature an I2C 16x2 LCD, buzzer alarm for critical threshold breaches, and continuous calibration.
+                </p>
+                <div class="project-skills">
+                  <span class="skill-chip">Microcontrollers</span>
+                  <span class="skill-chip">Analog-to-Digital</span>
+                  <span class="skill-chip">I2C LCD</span>
+                  <span class="skill-chip">Interrupts & Timers</span>
+                  <span class="skill-chip">Calibration</span>
+                </div>
+                <div class="project-deliverables">
+                  <strong>Key Deliverable:</strong> Full schematic, working firmware in C++/Arduino, test benchmark report with error percentage against a standard thermometer.
+                </div>
+              </div>
+
+              <!-- Project 4 -->
+              <div class="project-card card" id="proj-card-y2-2">
+                <div class="project-header">
+                  <div class="project-tag-wrap">
+                    <span class="project-type-badge">Project 4 • Virtual Instrument GUI</span>
+                    <label class="custom-checkbox project-checkbox-wrap">
+                      <input type="checkbox" id="proj-y2-2" data-task-id="proj-y2-2" data-year="year-2">
+                      <span class="checkbox-box"><i data-lucide="check"></i></span>
+                      <span class="project-status-label">Mark Completed</span>
+                    </label>
+                  </div>
+                  <h5 class="project-name">Virtual Instrumentation Dashboard</h5>
+                </div>
+                <p class="project-description">
+                  Build a PC-based virtual instrument desktop dashboard using Python (Tkinter/PyQt or Streamlit) or LabVIEW. Display live gauge dials, real-time strip charts, min/max metrics, and data export features from incoming serial sensors.
+                </p>
+                <div class="project-skills">
+                  <span class="skill-chip">Python GUI / PyQt</span>
+                  <span class="skill-chip">Serial Protocol</span>
+                  <span class="skill-chip">NumPy & Pandas</span>
+                  <span class="skill-chip">HMI Concept</span>
+                  <span class="skill-chip">Data Visualization</span>
+                </div>
+                <div class="project-deliverables">
+                  <strong>Key Deliverable:</strong> Responsive virtual instrument GUI with live multi-channel graphs, emergency stop button, and historical CSV logging.
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- =================================================================== -->
+        <!-- YEAR 3: SPECIALIZATION (2028–2029)                                 -->
+        <!-- =================================================================== -->
+        <article class="year-block" id="year-3">
+          <header class="year-header">
+            <div class="year-header-info">
+              <span class="year-meta-pill">ACADEMIC YEAR 3 • 2028–2029</span>
+              <h3 class="year-heading">Year 3: Specialization</h3>
+              <p class="year-summary">
+                Advance into industrial process automation, PLC ladder logic, SCADA architecture, Embedded C, industrial field protocols (Modbus, CAN, Profibus), and kick off dedicated GATE & internship recruitment prep.
+              </p>
+            </div>
+            <div class="year-progress-wrapper">
+              <span class="year-progress-label">Year 3 Progress</span>
+              <div class="year-progress-bar">
+                <div class="year-progress-fill" id="progress-year-3" style="width: 0%;"></div>
+              </div>
+              <span class="year-progress-text" id="progress-text-year-3">0%</span>
+            </div>
+          </header>
+
+          <div class="year-media-banner">
+            <img src="assets/year3-automation.svg" 
+                 alt="Year 3: Industrial Automation, SCADA Process Control &amp; PLC Systems" 
+                 class="year-banner-img"
+                 loading="lazy">
+            <div class="year-banner-overlay">
+              <div class="banner-badge">
+                <i data-lucide="factory"></i>
+                <span>Objective: Process Automation, Embedded Firmware & GATE Readiness</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="semesters-grid">
+            <!-- Semester 5 Card -->
+            <div class="semester-card card" id="sem-card-5">
+              <div class="semester-header" role="button" tabindex="0" aria-expanded="true">
+                <div class="sem-title-wrap">
+                  <span class="sem-badge">SEMESTER 5</span>
+                  <h4 class="sem-title">Industrial Automation, Process Control & Embedded C</h4>
+                </div>
+                <div class="sem-toggle-icon">
+                  <i data-lucide="chevron-down"></i>
+                </div>
+              </div>
+              <div class="semester-content">
+                <p class="sem-intro">Step into the industrial world: control valves, PID loop tuning, programmable logic controllers, and bare-metal embedded programming.</p>
+
+                <!-- Core Subjects Checklist -->
+                <div class="sem-section-block">
+                  <h5 class="sem-block-heading"><i data-lucide="check-square"></i> Core Subjects & Concepts</h5>
+                  <ul class="subject-checklist" data-sem="sem-5">
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y3-s5-1" data-task-id="y3-s5-1" data-year="year-3">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Industrial Instrumentation:</strong> Flow (Electromagnetic, Vortex), Pressure (Piezoelectric, Capacitive), Level, and Temperature measurement in industrial plants
+                        </span>
+                      </label>
+                      <span class="tag tag-ee">Plant Core</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y3-s5-2" data-task-id="y3-s5-2" data-year="year-3">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Advanced Control Systems:</strong> State space modeling, controllability & observability, P/PI/PID controller tuning, compensator design
+                        </span>
+                      </label>
+                      <span class="tag tag-math">Control Theory</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y3-s5-3" data-task-id="y3-s5-3" data-year="year-3">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Embedded C:</strong> Bitwise registers, ISRs, memory mapped I/O, device drivers, bare-metal ARM Cortex / AVR coding
+                        </span>
+                      </label>
+                      <span class="tag tag-code">Embedded Industry</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y3-s5-4" data-task-id="y3-s5-4" data-year="year-3">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>PLC and SCADA:</strong> Ladder logic, functional block diagrams, Allen Bradley / Siemens TIA portal concepts, HMI screens, alarming
+                        </span>
+                      </label>
+                      <span class="tag tag-tool">Automation Essential</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y3-s5-5" data-task-id="y3-s5-5" data-year="year-3">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Communication Protocols:</strong> Modbus RTU/TCP, CAN Bus, Profibus, HART protocol, 4-20mA current loop standard
+                        </span>
+                      </label>
+                      <span class="tag tag-tool">Industrial Comms</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Comprehensive Skills Breakdown -->
+                <div class="skills-breakdown-row">
+                  <div class="skills-cell">
+                    <h6><i data-lucide="cpu"></i> Technical Skills</h6>
+                    <p>PLC ladder logic design, SCADA HMI configuration, PID closed-loop tuning, RS-485 Modbus packet sniffing</p>
+                  </div>
+                  <div class="skills-cell">
+                    <h6><i data-lucide="code"></i> Programming</h6>
+                    <p>Bare-metal Embedded C, PLC Ladder Logic (IEC 61131-3), Python MQTT pub/sub for IIoT</p>
+                  </div>
+                  <div class="skills-cell">
+                    <h6><i data-lucide="activity"></i> AEIE Core</h6>
+                    <p>Control valve sizing (Cv), Ziegler-Nichols tuning, state controllability rank tests, current loop standard</p>
+                  </div>
+                </div>
+
+                <!-- Internship Preparation & Career Milestones -->
+                <div class="internship-milestone-box">
+                  <div class="im-item">
+                    <strong><i data-lucide="briefcase"></i> Internship Prep:</strong> Apply for mandatory summer industrial training at thermal power stations, steel plants, chemical refineries, or automation vendors.
+                  </div>
+                  <div class="im-item">
+                    <strong><i data-lucide="flag"></i> Career Milestone:</strong> Begin systematic GATE IN/EE/EC preparation with subject-wise test series and 10-year question papers.
+                  </div>
+                </div>
+
+                <div class="mentor-tip">
+                  <i data-lucide="lightbulb" class="tip-icon"></i>
+                  <span><strong>Mentor Advice:</strong> 4-20 mA current loop is the universal industrial standard. Understand why current transmission resists line noise much better than voltage.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Semester 6 Card -->
+            <div class="semester-card card" id="sem-card-6">
+              <div class="semester-header" role="button" tabindex="0" aria-expanded="true">
+                <div class="sem-title-wrap">
+                  <span class="sem-badge">SEMESTER 6</span>
+                  <h4 class="sem-title">Technical Mastery, GATE Rigor & Career Readiness</h4>
+                </div>
+                <div class="sem-toggle-icon">
+                  <i data-lucide="chevron-down"></i>
+                </div>
+              </div>
+              <div class="semester-content">
+                <p class="sem-intro">Crucial junction: balance high semester GPA with problem-solving aptitude, GATE preparation, and competitive summer internship applications.</p>
+
+                <!-- Core Subjects Checklist -->
+                <div class="sem-section-block">
+                  <h5 class="sem-block-heading"><i data-lucide="check-square"></i> Core Subjects & Concepts</h5>
+                  <ul class="subject-checklist" data-sem="sem-6">
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y3-s6-1" data-task-id="y3-s6-1" data-year="year-3">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Advanced Technical Skills:</strong> Biomedical Instrumentation, Analytical Instruments (Spectroscopy, Chromatography), Optoelectronics
+                        </span>
+                      </label>
+                      <span class="tag tag-ee">Domain Specialty</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y3-s6-2" data-task-id="y3-s6-2" data-year="year-3">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>DSA and Quantitative Aptitude:</strong> Time complexity, dynamic programming, quantitative math, logical reasoning, verbal ability
+                        </span>
+                      </label>
+                      <span class="tag tag-code">Placements</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y3-s6-3" data-task-id="y3-s6-3" data-year="year-3">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>GATE Preparation Strategy:</strong> Solve 10 years of GATE IN/EE/EC papers, mock tests, formula revisions
+                        </span>
+                      </label>
+                      <span class="tag tag-math">Higher Studies / PSU</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y3-s6-4" data-task-id="y3-s6-4" data-year="year-3">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Resume & LinkedIn Optimization:</strong> Clean ATS-friendly single-page resume, GitHub project highlights, professional networking
+                        </span>
+                      </label>
+                      <span class="tag tag-tool">Career Launch</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y3-s6-5" data-task-id="y3-s6-5" data-year="year-3">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Internship Applications:</strong> Target AICTE portal, industrial training in core plants (Steel, Power, Refineries, Automation vendors)
+                        </span>
+                      </label>
+                      <span class="tag tag-tool">Practical Training</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Comprehensive Skills Breakdown -->
+                <div class="skills-breakdown-row">
+                  <div class="skills-cell">
+                    <h6><i data-lucide="cpu"></i> Technical Skills</h6>
+                    <p>Biomedical signal conditioning (ECG amplifiers), Optical alignment, Mock interview rehearsals</p>
+                  </div>
+                  <div class="skills-cell">
+                    <h6><i data-lucide="code"></i> Programming</h6>
+                    <p>Advanced DSA in C++/Python, RTOS task management, SQL database queries for industrial logs</p>
+                  </div>
+                  <div class="skills-cell">
+                    <h6><i data-lucide="activity"></i> AEIE Core</h6>
+                    <p>Safety Integrity Levels (SIL), chromatography retention times, formula derivations for GATE</p>
+                  </div>
+                </div>
+
+                <!-- Internship Preparation & Career Milestones -->
+                <div class="internship-milestone-box">
+                  <div class="im-item">
+                    <strong><i data-lucide="briefcase"></i> Internship Prep:</strong> Secure confirmed summer industrial training slot (minimum 4-6 weeks) and maintain daily technical training diary.
+                  </div>
+                  <div class="im-item">
+                    <strong><i data-lucide="flag"></i> Career Milestone:</strong> Finish 75% of GATE syllabus; optimize single-page ATS resume with quantified project metrics.
+                  </div>
+                </div>
+
+                <div class="mentor-tip">
+                  <i data-lucide="lightbulb" class="tip-icon"></i>
+                  <span><strong>Mentor Advice:</strong> Complete your summer industrial training between 6th and 7th semester. UIT Burdwan requires industrial training reports and presentations in 7th sem.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Year 3 Projects -->
+          <div class="projects-section-block">
+            <h4 class="projects-block-title">
+              <i data-lucide="folder-git-2"></i> Year 3 Portfolio Projects
+            </h4>
+            <div class="projects-grid">
+              <!-- Project 5 -->
+              <div class="project-card card" id="proj-card-y3-1">
+                <div class="project-header">
+                  <div class="project-tag-wrap">
+                    <span class="project-type-badge">Project 5 • Industrial IoT & Cloud</span>
+                    <label class="custom-checkbox project-checkbox-wrap">
+                      <input type="checkbox" id="proj-y3-1" data-task-id="proj-y3-1" data-year="year-3">
+                      <span class="checkbox-box"><i data-lucide="check"></i></span>
+                      <span class="project-status-label">Mark Completed</span>
+                    </label>
+                  </div>
+                  <h5 class="project-name">Industrial IoT (IIoT) Condition Monitoring System</h5>
+                </div>
+                <p class="project-description">
+                  Build an IIoT predictive maintenance edge device using ESP32 / Raspberry Pi. Transmit vibration, motor temperature, and current consumption data via MQTT broker to a cloud dashboard (ThingsBoard / Adafruit IO / AWS IoT) with automated anomaly alerts.
+                </p>
+                <div class="project-skills">
+                  <span class="skill-chip">MQTT Protocol</span>
+                  <span class="skill-chip">ESP32 / FreeRTOS</span>
+                  <span class="skill-chip">Cloud Dashboards</span>
+                  <span class="skill-chip">Vibration Analysis</span>
+                  <span class="skill-chip">Node-RED</span>
+                </div>
+                <div class="project-deliverables">
+                  <strong>Key Deliverable:</strong> Live MQTT publishing pipeline, SSL/TLS security, edge threshold filtering, and interactive dashboard with email/SMS anomaly alerts.
+                </div>
+              </div>
+
+              <!-- Project 6 -->
+              <div class="project-card card" id="proj-card-y3-2">
+                <div class="project-header">
+                  <div class="project-tag-wrap">
+                    <span class="project-type-badge">Project 6 • Embedded Systems Project</span>
+                    <label class="custom-checkbox project-checkbox-wrap">
+                      <input type="checkbox" id="proj-y3-2" data-task-id="proj-y3-2" data-year="year-3">
+                      <span class="checkbox-box"><i data-lucide="check"></i></span>
+                      <span class="project-status-label">Mark Completed</span>
+                    </label>
+                  </div>
+                  <h5 class="project-name">Digital Closed-Loop Motor Speed Controller (PID)</h5>
+                </div>
+                <p class="project-description">
+                  Implement a discrete PID control algorithm on a microcontroller to regulate DC motor RPM under fluctuating mechanical loads using optical encoder feedback and H-Bridge PWM switching.
+                </p>
+                <div class="project-skills">
+                  <span class="skill-chip">Embedded C</span>
+                  <span class="skill-chip">Digital PID</span>
+                  <span class="skill-chip">Optical Encoders</span>
+                  <span class="skill-chip">Hardware PWM</span>
+                  <span class="skill-chip">Oscilloscope Testing</span>
+                </div>
+                <div class="project-deliverables">
+                  <strong>Key Deliverable:</strong> Mathematical model derivation in MATLAB/Simulink, translated into bare-metal C code with settling time under 500ms and minimal overshoot.
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- =================================================================== -->
+        <!-- YEAR 4: CAREER LAUNCH (2029–2030)                                   -->
+        <!-- =================================================================== -->
+        <article class="year-block" id="year-4">
+          <header class="year-header">
+            <div class="year-header-info">
+              <span class="year-meta-pill">ACADEMIC YEAR 4 • 2029–2030</span>
+              <h3 class="year-heading">Year 4: Career Launch</h3>
+              <p class="year-summary">
+                Convert four years of rigorous training into concrete career outcomes: capstone project execution, high-stakes campus and off-campus interviews, GATE exam performance, and postgraduate admissions.
+              </p>
+            </div>
+            <div class="year-progress-wrapper">
+              <span class="year-progress-label">Year 4 Progress</span>
+              <div class="year-progress-bar">
+                <div class="year-progress-fill" id="progress-year-4" style="width: 0%;"></div>
+              </div>
+              <span class="year-progress-text" id="progress-text-year-4">0%</span>
+            </div>
+          </header>
+
+          <div class="year-media-banner">
+            <img src="assets/year4-career.svg" 
+                 alt="Year 4: Engineering Capstone, Placement Drives &amp; GATE Higher Studies" 
+                 class="year-banner-img"
+                 loading="lazy">
+            <div class="year-banner-overlay">
+              <div class="banner-badge">
+                <i data-lucide="rocket"></i>
+                <span>Objective: Capstone Engineering, High-Impact Placements & Higher Studies</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="semesters-grid">
+            <!-- Semester 7 Card -->
+            <div class="semester-card card" id="sem-card-7">
+              <div class="semester-header" role="button" tabindex="0" aria-expanded="true">
+                <div class="sem-title-wrap">
+                  <span class="sem-badge">SEMESTER 7</span>
+                  <h4 class="sem-title">Technical Interviews, Final Project Phase 1 & GATE Sprint</h4>
+                </div>
+                <div class="sem-toggle-icon">
+                  <i data-lucide="chevron-down"></i>
+                </div>
+              </div>
+              <div class="semester-content">
+                <p class="sem-intro">The placement season is live. Execute technical interviews, finalize capstone literature survey, and hone examination accuracy.</p>
+
+                <!-- Core Subjects Checklist -->
+                <div class="sem-section-block">
+                  <h5 class="sem-block-heading"><i data-lucide="check-square"></i> Core Subjects & Concepts</h5>
+                  <ul class="subject-checklist" data-sem="sem-7">
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y4-s7-1" data-task-id="y4-s7-1" data-year="year-4">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Technical Interview Preparation:</strong> Core electronics viva, instrumentation circuits, C/C++ conceptual debugging, system design basics
+                        </span>
+                      </label>
+                      <span class="tag tag-tool">Placement Viva</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y4-s7-2" data-task-id="y4-s7-2" data-year="year-4">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>GATE Final Sprint:</strong> Subject-wise test series, full-length simulations, time management, eliminating negative marking
+                        </span>
+                      </label>
+                      <span class="tag tag-math">GATE Exam</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y4-s7-3" data-task-id="y4-s7-3" data-year="year-4">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Placement Aptitude & Soft Skills:</strong> Company-specific patterns, group discussions, HR behavioral rounds (STAR method)
+                        </span>
+                      </label>
+                      <span class="tag tag-code">Recruitment</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y4-s7-4" data-task-id="y4-s7-4" data-year="year-4">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Final-Year Project (Phase 1):</strong> Problem definition, faculty guide approval, state-of-the-art literature review, hardware design
+                        </span>
+                      </label>
+                      <span class="tag tag-ee">Capstone Project</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Comprehensive Skills Breakdown -->
+                <div class="skills-breakdown-row">
+                  <div class="skills-cell">
+                    <h6><i data-lucide="cpu"></i> Technical Skills</h6>
+                    <p>Interview whiteboarding, Hardware schematic CAD design, System architecture tradeoffs</p>
+                  </div>
+                  <div class="skills-cell">
+                    <h6><i data-lucide="code"></i> Programming</h6>
+                    <p>Production firmware code reviews, Clean architectural patterns, Embedded RTOS tuning</p>
+                  </div>
+                  <div class="skills-cell">
+                    <h6><i data-lucide="activity"></i> AEIE Core</h6>
+                    <p>Comprehensive viva voce mastery across Instrumentation, Control Loops & Silicon Devices</p>
+                  </div>
+                </div>
+
+                <!-- Internship Preparation & Career Milestones -->
+                <div class="internship-milestone-box">
+                  <div class="im-item">
+                    <strong><i data-lucide="briefcase"></i> Internship Prep:</strong> Submit summer industrial training report and deliver technical seminar presentation to faculty board.
+                  </div>
+                  <div class="im-item">
+                    <strong><i data-lucide="flag"></i> Career Milestone:</strong> Appear for campus recruitment drives; seek Pre-Placement Offers (PPO) if applicable.
+                  </div>
+                </div>
+
+                <div class="mentor-tip">
+                  <i data-lucide="lightbulb" class="tip-icon"></i>
+                  <span><strong>Mentor Advice:</strong> Structure your project presentation cleanly. Interviewers love hearing about real engineering troubleshooting hurdles you overcame.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Semester 8 Card -->
+            <div class="semester-card card" id="sem-card-8">
+              <div class="semester-header" role="button" tabindex="0" aria-expanded="true">
+                <div class="sem-title-wrap">
+                  <span class="sem-badge">SEMESTER 8</span>
+                  <h4 class="sem-title">Capstone Completion, On/Off-Campus Drives & Graduation</h4>
+                </div>
+                <div class="sem-toggle-icon">
+                  <i data-lucide="chevron-down"></i>
+                </div>
+              </div>
+              <div class="semester-content">
+                <p class="sem-intro">Cross the finish line: complete the capstone prototype, submit the thesis, clear placement drives, and formalize postgraduate admissions.</p>
+
+                <!-- Core Subjects Checklist -->
+                <div class="sem-section-block">
+                  <h5 class="sem-block-heading"><i data-lucide="check-square"></i> Core Subjects & Concepts</h5>
+                  <ul class="subject-checklist" data-sem="sem-8">
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y4-s8-1" data-task-id="y4-s8-1" data-year="year-4">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Final-Year Project Completion:</strong> Full hardware prototype testing, calibration, thesis writing, external viva presentation
+                        </span>
+                      </label>
+                      <span class="tag tag-ee">Major Milestone</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y4-s8-2" data-task-id="y4-s8-2" data-year="year-4">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Campus & Off-Campus Placements:</strong> Core engineering drives, IT services/product drives, startup outreach, onboarding documentation
+                        </span>
+                      </label>
+                      <span class="tag tag-tool">Job Offers</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y4-s8-3" data-task-id="y4-s8-3" data-year="year-4">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>GATE Counseling & M.Tech Applications:</strong> COAP / CCMT portals for IITs & NITs, PSU recruitments based on valid GATE score
+                        </span>
+                      </label>
+                      <span class="tag tag-math">Higher Education</span>
+                    </li>
+                    <li class="checklist-item">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" id="item-y4-s8-4" data-task-id="y4-s8-4" data-year="year-4">
+                        <span class="checkbox-box"><i data-lucide="check"></i></span>
+                        <span class="item-text">
+                          <strong>Interview Preparation & Transition:</strong> Corporate workplace readiness, continuing professional certifications, alumni network engagement
+                        </span>
+                      </label>
+                      <span class="tag tag-tool">Alumni Life</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Comprehensive Skills Breakdown -->
+                <div class="skills-breakdown-row">
+                  <div class="skills-cell">
+                    <h6><i data-lucide="cpu"></i> Technical Skills</h6>
+                    <p>IEEE format engineering thesis documentation, Prototype physical demonstration, Professional engineering ethics</p>
+                  </div>
+                  <div class="skills-cell">
+                    <h6><i data-lucide="code"></i> Programming</h6>
+                    <p>End-to-end software/firmware release tagging, Git repository archiving, LaTeX technical publishing</p>
+                  </div>
+                  <div class="skills-cell">
+                    <h6><i data-lucide="activity"></i> AEIE Core</h6>
+                    <p>System-wide sensor-to-cloud commissioning, instrument calibration certification, Plant safety standards</p>
+                  </div>
+                </div>
+
+                <!-- Internship Preparation & Career Milestones -->
+                <div class="internship-milestone-box">
+                  <div class="im-item">
+                    <strong><i data-lucide="briefcase"></i> Internship Prep:</strong> Complete onboarding verification and background check paperwork for selected employers.
+                  </div>
+                  <div class="im-item">
+                    <strong><i data-lucide="flag"></i> Career Milestone:</strong> Successfully graduate with B.E. in AEIE from UIT Burdwan and transition to corporate or research career!
+                  </div>
+                </div>
+
+                <div class="mentor-tip">
+                  <i data-lucide="lightbulb" class="tip-icon"></i>
+                  <span><strong>Mentor Advice:</strong> Maintain your project code, demo video, and thesis paper permanently on your personal GitHub and LinkedIn to serve as a portfolio long after graduation.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 7. PROJECT PORTFOLIO SHOWCASE SECTION                                     -->
+    <!-- ========================================================================= -->
+    <section class="portfolio-section" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i data-lucide="folder-git-2"></i>
+            <span>HANDS-ON PORTFOLIO</span>
+          </div>
+          <h2 class="section-title">AEIE Engineering Project Portfolio</h2>
+          <p class="section-subtitle">
+            Six industry-calibrated prototypes engineered to build a competitive GitHub and hardware project portfolio.
+          </p>
+        </div>
+
+        <!-- Filter Tabs for Projects -->
+        <div class="filter-tabs-bar" id="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects (6)</button>
+          <button class="filter-btn" data-filter="Embedded">Embedded & Microcontrollers</button>
+          <button class="filter-btn" data-filter="IoT">Industrial IoT & Cloud</button>
+          <button class="filter-btn" data-filter="Python">Python & Virtual GUI</button>
+          <button class="filter-btn" data-filter="C Language">C Language & Systems</button>
+        </div>
+
+        <div class="portfolio-cards-grid" id="portfolio-grid">
+          <!-- Dynamically populated or enhanced from static cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 8. CAREER OPPORTUNITIES (8 PATHWAYS)                                      -->
+    <!-- ========================================================================= -->
+    <section class="careers-section" id="careers">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i data-lucide="compass"></i>
+            <span>INDUSTRY HORIZONS</span>
+          </div>
+          <h2 class="section-title">Career Opportunities for AEIE Graduates</h2>
+          <p class="section-subtitle">
+            Explore the diverse domains open to Applied Electronics and Instrumentation engineers across industry, government, and academia.
+          </p>
+        </div>
+
+        <!-- Ethical & Professional Disclaimer Box -->
+        <div class="career-disclaimer-box card">
+          <div class="disclaimer-icon">
+            <i data-lucide="alert-circle"></i>
+          </div>
+          <div class="disclaimer-text">
+            <h4>Important Career & Eligibility Guidance</h4>
+            <p>
+              The career opportunities presented below represent realistic industry pathways for AEIE graduates. 
+              <strong>No university or roadmap can promise guaranteed jobs.</strong> Recruitment eligibility, cut-off percentages, 
+              GATE score validity, CGPA criteria, and selection standards vary significantly across corporate recruiters, PSUs, 
+              and universities. Students must review official recruitment notices and institutional eligibility guidelines.
+            </p>
+          </div>
+        </div>
+
+        <!-- 8 Career Pathway Cards Grid -->
+        <div class="careers-grid">
+          <!-- Career 1: Core Electronics -->
+          <div class="career-card card">
+            <div class="career-icon-box">
+              <i data-lucide="cpu"></i>
+            </div>
+            <div class="career-badge">Hardware & Silicon</div>
+            <h3 class="career-title">1. Core Electronics</h3>
+            <p class="career-desc">
+              Design, test, and validate analog and digital electronic circuits, power electronic drivers, and printed circuit boards (PCB) for consumer, industrial, and defense hardware.
+            </p>
+            <div class="career-details">
+              <div class="detail-row">
+                <strong>Typical Roles:</strong> Hardware Design Engineer, PCB Layout Engineer, Test & Validation Engineer.
+              </div>
+              <div class="detail-row">
+                <strong>Key Skills:</strong> Altium / KiCad, LTspice simulation, Analog circuit design, Oscilloscopes & Logic Analyzers.
+              </div>
+              <div class="detail-row">
+                <strong>Industry Examples:</strong> Texas Instruments, Bosch, STMicroelectronics, NXP, Analog Devices, Havells.
+              </div>
+            </div>
+          </div>
+
+          <!-- Career 2: Embedded Systems -->
+          <div class="career-card card">
+            <div class="career-icon-box">
+              <i data-lucide="binary"></i>
+            </div>
+            <div class="career-badge">Firmware & Microcontrollers</div>
+            <h3 class="career-title">2. Embedded Systems</h3>
+            <p class="career-desc">
+              Write low-level firmware, driver software, and real-time operating system (RTOS) tasks that control hardware devices, IoT appliances, automotive controllers, and robotics.
+            </p>
+            <div class="career-details">
+              <div class="detail-row">
+                <strong>Typical Roles:</strong> Embedded Software Engineer, Firmware Developer, IoT Systems Engineer.
+              </div>
+              <div class="detail-row">
+                <strong>Key Skills:</strong> Embedded C/C++, ARM Cortex (STM32), FreeRTOS, I2C/SPI/UART, Bare-metal debugging.
+              </div>
+              <div class="detail-row">
+                <strong>Industry Examples:</strong> Qualcomm, Intel, Continental, Tata Elxsi, Ather Energy, L&T Technology Services.
+              </div>
+            </div>
+          </div>
+
+          <!-- Career 3: Industrial Automation -->
+          <div class="career-card card">
+            <div class="career-icon-box">
+              <i data-lucide="factory"></i>
+            </div>
+            <div class="career-badge">Plant Control & SCADA</div>
+            <h3 class="career-title">3. Industrial Automation</h3>
+            <p class="career-desc">
+              Automate manufacturing lines, pharmaceutical plants, power stations, and refineries through programmable logic controllers (PLCs), distributed control systems (DCS), and SCADA.
+            </p>
+            <div class="career-details">
+              <div class="detail-row">
+                <strong>Typical Roles:</strong> Automation Engineer, PLC/SCADA Specialist, DCS Commissioning Engineer.
+              </div>
+              <div class="detail-row">
+                <strong>Key Skills:</strong> Ladder Logic, Siemens TIA / Allen-Bradley, Modbus/Profibus, HMI design, Industrial safety.
+              </div>
+              <div class="detail-row">
+                <strong>Industry Examples:</strong> Siemens, ABB, Schneider Electric, Rockwell Automation, Honeywell, Emerson.
+              </div>
+            </div>
+          </div>
+
+          <!-- Career 4: Instrumentation Engineering -->
+          <div class="career-card card">
+            <div class="career-icon-box">
+              <i data-lucide="gauge"></i>
+            </div>
+            <div class="career-badge">Process & Metrology</div>
+            <h3 class="career-title">4. Instrumentation Engineering</h3>
+            <p class="career-desc">
+              Specialized domain focusing on calibration, precision measurement, sensor integration, control valves, and process safety in chemical plants, oil & gas, and manufacturing facilities.
+            </p>
+            <div class="career-details">
+              <div class="detail-row">
+                <strong>Typical Roles:</strong> Process Instrumentation Engineer, Calibration Engineer, Maintenance Specialist.
+              </div>
+              <div class="detail-row">
+                <strong>Key Skills:</strong> P&ID interpretation, Sensor calibration, 4-20mA current loops, HART protocols, Control valves.
+              </div>
+              <div class="detail-row">
+                <strong>Industry Examples:</strong> Yokogawa, Endress+Hauser, Forbes Marshall, Tata Steel, Reliance Industries.
+              </div>
+            </div>
+          </div>
+
+          <!-- Career 5: Software Development -->
+          <div class="career-card card">
+            <div class="career-icon-box">
+              <i data-lucide="code"></i>
+            </div>
+            <div class="career-badge">Tech & IT Industry</div>
+            <h3 class="career-title">5. Software Development</h3>
+            <p class="career-desc">
+              Leverage strong mathematical and algorithmic problem-solving to build software applications, backend services, cloud systems, and data-driven tools in the technology sector.
+            </p>
+            <div class="career-details">
+              <div class="detail-row">
+                <strong>Typical Roles:</strong> Software Development Engineer (SDE), Backend Developer, Systems Programmer.
+              </div>
+              <div class="detail-row">
+                <strong>Key Skills:</strong> C++, Python, Java, Data Structures & Algorithms, Git, SQL, REST APIs.
+              </div>
+              <div class="detail-row">
+                <strong>Industry Examples:</strong> Product tech companies, TCS, Infosys, Cognizant, Wipro, Capgemini, Fintech firms.
+              </div>
+            </div>
+          </div>
+
+          <!-- Career 6: GATE and M.Tech -->
+          <div class="career-card card">
+            <div class="career-icon-box">
+              <i data-lucide="award"></i>
+            </div>
+            <div class="career-badge">Premier Higher Studies</div>
+            <h3 class="career-title">6. GATE and M.Tech</h3>
+            <p class="career-desc">
+              Crack the Graduate Aptitude Test in Engineering (GATE) in Instrumentation (IN), Electrical (EE), or Electronics (EC) to secure admission to prestigious postgraduate programs at IITs, IISc, and NITs.
+            </p>
+            <div class="career-details">
+              <div class="detail-row">
+                <strong>Specializations:</strong> VLSI & Microelectronics, Control & Automation, Biomedical Engineering, Signal Processing.
+              </div>
+              <div class="detail-row">
+                <strong>Key Preparation:</strong> Rigorous syllabus mastery, 15+ years of solved papers, mock test series, mathematical depth.
+              </div>
+              <div class="detail-row">
+                <strong>Top Institutions:</strong> IISc Bangalore, IIT Bombay, IIT Kharagpur, IIT Delhi, IIT Madras, NIT Trichy.
+              </div>
+            </div>
+          </div>
+
+          <!-- Career 7: PSU & Government Engineering Careers -->
+          <div class="career-card card">
+            <div class="career-icon-box">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <div class="career-badge">Public Sector Undertakings</div>
+            <h3 class="career-title">7. PSU & Government Engineering Careers</h3>
+            <p class="career-desc">
+              Serve in India's leading public sector enterprises, research establishments, and infrastructure corporations that manage national power, petroleum, defense, and space systems.
+            </p>
+            <div class="career-details">
+              <div class="detail-row">
+                <strong>Typical Roles:</strong> Executive Trainee (Instrumentation / Electronics), Scientific Officer, Junior Telecom Officer.
+              </div>
+              <div class="detail-row">
+                <strong>Selection Channels:</strong> High GATE score ranking followed by GD/Interview; or specialized recruitment exams.
+              </div>
+              <div class="detail-row">
+                <strong>Leading PSUs:</strong> ONGC, IOCL, NTPC, BHEL, GAIL, SAIL, BARC, ISRO, DRDO, PowerGrid, WBSEDCL.
+              </div>
+            </div>
+          </div>
+
+          <!-- Career 8: Research and Higher Studies -->
+          <div class="career-card card">
+            <div class="career-icon-box">
+              <i data-lucide="microscope"></i>
+            </div>
+            <div class="career-badge">Academic & R&D Labs</div>
+            <h3 class="career-title">8. Research and Higher Studies</h3>
+            <p class="career-desc">
+              Pursue cutting-edge scientific inquiries in sensors, MEMS, quantum sensing, bio-optics, and intelligent robotics through MS or PhD programs at leading international and Indian universities.
+            </p>
+            <div class="career-details">
+              <div class="detail-row">
+                <strong>Focus Areas:</strong> Flexible Sensors, Nanotechnology, Cyber-Physical Systems, Medical Imaging Instrumentation.
+              </div>
+              <div class="detail-row">
+                <strong>Key Prerequisites:</strong> Strong undergraduate GPA, peer-reviewed paper publications, GRE/TOEFL (for abroad), SOP.
+              </div>
+              <div class="detail-row">
+                <strong>Destinations:</strong> Germany (TU9), USA, Singapore (NUS/NTU), CSIR-CSIO, CEERI Pilani, IISc.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 9. GATE & HIGHER-STUDY PREPARATION SECTION                                -->
+    <!-- ========================================================================= -->
+    <section class="gate-section" id="gate">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i data-lucide="award"></i>
+            <span>POSTGRADUATE EXCELLENCE</span>
+          </div>
+          <h2 class="section-title">GATE & Higher Studies Master Guide</h2>
+          <p class="section-subtitle">
+            Strategic syllabus breakdown, paper codes (IN vs EE vs EC), recommended textbooks, and admission pathways.
+          </p>
+        </div>
+
+        <div class="gate-overview-grid">
+          <!-- Card 1: Paper Choice -->
+          <div class="card gate-card">
+            <div class="gate-icon-box">
+              <i data-lucide="layers"></i>
+            </div>
+            <h3 class="gate-card-title">GATE IN vs EE vs EC</h3>
+            <p class="gate-card-desc">
+              AEIE students at UIT Burdwan have the strategic advantage of being eligible to write GATE in Instrumentation (IN), Electrical Engineering (EE), or Electronics & Communication (EC).
+            </p>
+            <ul class="gate-list">
+              <li><strong>GATE IN (Primary):</strong> Closest match to AEIE curriculum. Highest conversion ratio for premier IIT Instrumentation & Control specializations.</li>
+              <li><strong>GATE EE / EC:</strong> Ideal for students aiming for broad power PSU recruitments or VLSI/Microelectronics specializations.</li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Syllabus Weightage -->
+          <div class="card gate-card">
+            <div class="gate-icon-box">
+              <i data-lucide="pie-chart"></i>
+            </div>
+            <h3 class="gate-card-title">Core Syllabus Weightage</h3>
+            <ul class="gate-list">
+              <li><strong>Engineering Mathematics:</strong> 13 Marks (Calculus, Linear Algebra, Diff Eq, Vector Calculus, Probability)</li>
+              <li><strong>General Aptitude:</strong> 15 Marks (Verbal & Numerical Ability)</li>
+              <li><strong>Transducers & Measurements:</strong> 12–16 Marks</li>
+              <li><strong>Control Systems:</strong> 10–14 Marks</li>
+              <li><strong>Signals & Systems + Analog/Digital:</strong> 20–25 Marks</li>
+              <li><strong>Communication & Optical:</strong> 8–10 Marks</li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Standard Reference Books -->
+          <div class="card gate-card">
+            <div class="gate-icon-box">
+              <i data-lucide="book-marked"></i>
+            </div>
+            <h3 class="gate-card-title">Recommended Standard Textbooks</h3>
+            <ul class="gate-list">
+              <li><strong>Control Systems:</strong> I.J. Nagrath & M. Gopal / Norman Nise</li>
+              <li><strong>Instrumentation & Sensors:</strong> A.K. Sawhney / Patranabis</li>
+              <li><strong>Network Theory:</strong> Van Valkenburg / Hayt & Kemmerly</li>
+              <li><strong>Signals & Systems:</strong> Alan V. Oppenheim / Simon Haykin</li>
+              <li><strong>Analog Circuits:</strong> Sedra & Smith / Boylestad</li>
+              <li><strong>Digital Logic:</strong> M. Morris Mano</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Strategy Timeline Banner -->
+        <div class="card gate-timeline-banner">
+          <div class="gt-content">
+            <h4><i data-lucide="calendar"></i> 4-Stage GATE Preparation Roadmap</h4>
+            <div class="gt-phases">
+              <div class="gt-phase">
+                <span class="gt-pill">Semester 5</span>
+                <p>Complete theory for Control Systems, Networks, and Transducers with standard notes.</p>
+              </div>
+              <div class="gt-phase">
+                <span class="gt-pill">Semester 6</span>
+                <p>Solve last 15 years of GATE IN/EE papers chapter-wise; maintain an error logbook.</p>
+              </div>
+              <div class="gt-phase">
+                <span class="gt-pill">Semester 7</span>
+                <p>Enroll in a national-level mock test series; simulate actual 3-hour virtual calculator drills.</p>
+              </div>
+              <div class="gt-phase">
+                <span class="gt-pill">Semester 8</span>
+                <p>Appear for GATE exam in February; participate in COAP (IITs) and CCMT (NITs) counseling.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive GATE Preparation Checklist -->
+        <div class="card gate-checklist-card">
+          <div class="gate-checklist-header">
+            <div class="gate-checklist-title-group">
+              <div class="gate-icon-mini-box">
+                <i data-lucide="check-square" class="gate-check-icon"></i>
+              </div>
+              <div>
+                <h4 class="gate-checklist-heading">Interactive GATE Milestone Checklist</h4>
+                <p class="gate-checklist-desc">Check off your syllabus mastery. Automatically persisted across devices and synced to your profile.</p>
+              </div>
+            </div>
+            <div class="gate-checklist-status-badge">
+              <span id="gate-checklist-counter">0 / 6 Milestones Completed</span>
+            </div>
+          </div>
+          <div class="gate-checklist-items-grid">
+            <label class="gate-check-label" for="gate-math">
+              <input type="checkbox" id="gate-math" class="gate-checkbox" data-gate-id="gate-math">
+              <span class="gate-custom-indicator"></span>
+              <div class="gate-check-content">
+                <span class="gate-item-title">Engineering Mathematics &amp; General Aptitude</span>
+                <span class="gate-item-details">Calculus, Linear Algebra, Diff Equations, Probability &amp; Numerical Ability (28 Marks)</span>
+              </div>
+            </label>
+            <label class="gate-check-label" for="gate-networks">
+              <input type="checkbox" id="gate-networks" class="gate-checkbox" data-gate-id="gate-networks">
+              <span class="gate-custom-indicator"></span>
+              <div class="gate-check-content">
+                <span class="gate-item-title">Network Theory &amp; Signals and Systems</span>
+                <span class="gate-item-details">Thevenin/Norton, AC Steady State, Two-Port Networks, Fourier &amp; Laplace Transforms</span>
+              </div>
+            </label>
+            <label class="gate-check-label" for="gate-transducers">
+              <input type="checkbox" id="gate-transducers" class="gate-checkbox" data-gate-id="gate-transducers">
+              <span class="gate-custom-indicator"></span>
+              <div class="gate-check-content">
+                <span class="gate-item-title">Sensors &amp; Industrial Transducers</span>
+                <span class="gate-item-details">Resistive, Capacitive, Inductive Transducers, Piezoelectric, RTDs, Thermocouples &amp; Bridges</span>
+              </div>
+            </label>
+            <label class="gate-check-label" for="gate-control">
+              <input type="checkbox" id="gate-control" class="gate-checkbox" data-gate-id="gate-control">
+              <span class="gate-custom-indicator"></span>
+              <div class="gate-check-content">
+                <span class="gate-item-title">Control Systems &amp; Analog/Digital Circuits</span>
+                <span class="gate-item-details">Transfer Functions, Root Locus, Bode Plots, Op-Amp 741 circuits, ADC/DAC &amp; Logic Design</span>
+              </div>
+            </label>
+            <label class="gate-check-label" for="gate-papers-10yr">
+              <input type="checkbox" id="gate-papers-10yr" class="gate-checkbox" data-gate-id="gate-papers-10yr">
+              <span class="gate-custom-indicator"></span>
+              <div class="gate-check-content">
+                <span class="gate-item-title">10–15 Years GATE IN/EE Previous Year Papers (PYQs)</span>
+                <span class="gate-item-details">Solved subject-wise and year-wise from 2012 to 2026; error logbook maintained</span>
+              </div>
+            </label>
+            <label class="gate-check-label" for="gate-mock-test">
+              <input type="checkbox" id="gate-mock-test" class="gate-checkbox" data-gate-id="gate-mock-test">
+              <span class="gate-custom-indicator"></span>
+              <div class="gate-check-content">
+                <span class="gate-item-title">National Mock Test Series with Virtual Calculator</span>
+                <span class="gate-item-details">Simulate 3-hour exam temperament, negative marking control, and time allocation</span>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 10. INTERNSHIP PREPARATION BLUEPRINT                                      -->
+    <!-- ========================================================================= -->
+    <section class="internships-section" id="internships">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i data-lucide="briefcase"></i>
+            <span>PRACTICAL INDUSTRY TRANSITION</span>
+          </div>
+          <h2 class="section-title">Four-Year Internship Preparation Guide</h2>
+          <p class="section-subtitle">
+            A strategic phased roadmap to help UIT Burdwan AEIE students transition smoothly from classroom learning to corporate and industrial internships.
+          </p>
+        </div>
+
+        <!-- 4-Phase Internship Stepper -->
+        <div class="internship-phases-grid">
+          <!-- Phase 1 -->
+          <div class="phase-card card">
+            <div class="phase-number-badge">PHASE 1</div>
+            <div class="phase-icon">
+              <i data-lucide="code-2"></i>
+            </div>
+            <h3 class="phase-title">First-Year: Skill Development</h3>
+            <p class="phase-desc">
+              Lay an indisputable technical foundation. Learn version control, clean coding in C and Python, and establish your public developer presence.
+            </p>
+            <ul class="phase-checklist">
+              <li><i data-lucide="check-circle" class="sub-icon"></i> Master Git commands & push all lab code to GitHub.</li>
+              <li><i data-lucide="check-circle" class="sub-icon"></i> Learn terminal basics, Linux CLI, and markdown documentation.</li>
+              <li><i data-lucide="check-circle" class="sub-icon"></i> Build your first CLI and scripting mini-projects.</li>
+              <li><i data-lucide="check-circle" class="sub-icon"></i> Set up a clean LinkedIn profile highlighting your branch and interests.</li>
+            </ul>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="phase-card card">
+            <div class="phase-number-badge">PHASE 2</div>
+            <div class="phase-icon">
+              <i data-lucide="cpu"></i>
+            </div>
+            <h3 class="phase-title">Second-Year: Project Building</h3>
+            <p class="phase-desc">
+              Create working hardware and simulation projects that prove you can bridge theoretical equations with real electronic components.
+            </p>
+            <ul class="phase-checklist">
+              <li><i data-lucide="check-circle" class="sub-icon"></i> Prototype with Arduino/ESP32 on breadboards or Wokwi simulator.</li>
+              <li><i data-lucide="check-circle" class="sub-icon"></i> Interfacing sensors (temperature, ultrasonic, pressure) via I2C/SPI.</li>
+              <li><i data-lucide="check-circle" class="sub-icon"></i> Design virtual dashboards using Python or LabVIEW.</li>
+              <li><i data-lucide="check-circle" class="sub-icon"></i> Participate in college technical fests and open-source challenges.</li>
+            </ul>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="phase-card card">
+            <div class="phase-number-badge">PHASE 3</div>
+            <div class="phase-icon">
+              <i data-lucide="send"></i>
+            </div>
+            <h3 class="phase-title">Third-Year: Internship Applications</h3>
+            <p class="phase-desc">
+              Actively apply for summer industrial training and engineering internships. Target core plants, automation vendors, and research centers.
+            </p>
+            <ul class="phase-checklist">
+              <li><i data-lucide="check-circle" class="sub-icon"></i> Apply via the official AICTE Internship Portal.</li>
+              <li><i data-lucide="check-circle" class="sub-icon"></i> Reach out to local industrial belts (Durgapur/Asansol Steel, Thermal power).</li>
+              <li><i data-lucide="check-circle" class="sub-icon"></i> Target summer internships at PSUs (IOCL, SAIL, NTPC) and automation companies.</li>
+              <li><i data-lucide="check-circle" class="sub-icon"></i> Prepare a single-page ATS-optimized engineering resume.</li>
+            </ul>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="phase-card card">
+            <div class="phase-number-badge">PHASE 4</div>
+            <div class="phase-icon">
+              <i data-lucide="award"></i>
+            </div>
+            <h3 class="phase-title">Fourth-Year: Placement Preparation</h3>
+            <p class="phase-desc">
+              Convert training experience into full-time offers. Perfect technical vivas, placement aptitude tests, and capstone presentations.
+            </p>
+            <ul class="phase-checklist">
+              <li><i data-lucide="check-circle" class="sub-icon"></i> Rehearse mock technical interviews covering your projects and core AEIE.</li>
+              <li><i data-lucide="check-circle" class="sub-icon"></i> Master aptitude (quantitative, logical reasoning, verbal ability).</li>
+              <li><i data-lucide="check-circle" class="sub-icon"></i> Document industrial training certificate and compile final project thesis.</li>
+              <li><i data-lucide="check-circle" class="sub-icon"></i> Leverage alumni referrals on LinkedIn for off-campus opportunities.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Official AICTE Internship Portal Highlight Callout -->
+        <div class="aicte-portal-banner card">
+          <div class="aicte-content">
+            <div class="aicte-tag">
+              <i data-lucide="check-circle"></i>
+              <span>OFFICIAL GOVERNMENT OF INDIA INITIATIVE</span>
+            </div>
+            <h3 class="aicte-title">AICTE Internship Portal</h3>
+            <p class="aicte-desc">
+              The All India Council for Technical Education (AICTE) operates a unified national internship platform 
+              connecting engineering students with verified corporate internships, government departments, smart city projects, 
+              and industrial laboratories with structured stipends and certificates.
+            </p>
+            <div class="aicte-features">
+              <span class="aicte-feature-pill"><i data-lucide="shield-check"></i> 100% Verified Employers</span>
+              <span class="aicte-feature-pill"><i data-lucide="file-check"></i> Recognized Training Credit</span>
+              <span class="aicte-feature-pill"><i data-lucide="map-pin"></i> Pan-India & Remote Opportunities</span>
+            </div>
+          </div>
+          <div class="aicte-cta-box">
+            <a href="https://internship.aicte-india.org/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+              <span>Visit AICTE Internship Portal</span>
+              <i data-lucide="external-link" class="btn-icon-right"></i>
+            </a>
+            <span class="aicte-url-hint">URL: internship.aicte-india.org</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 11. FREE LEARNING RESOURCES DIRECTORY                                     -->
+    <!-- ========================================================================= -->
+    <section class="resources-section" id="resources">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i data-lucide="book-marked"></i>
+            <span>OPEN ACADEMIC ECOSYSTEM</span>
+          </div>
+          <h2 class="section-title">Curated Free Learning Resources</h2>
+          <p class="section-subtitle">
+            Authoritative, high-quality free learning platforms, hardware simulators, and tutorials to accelerate your AEIE journey. Search and filter by domain or skill.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="resource-filter-controls">
+          <div class="res-search-wrap">
+            <i data-lucide="search"></i>
+            <input type="text" id="resource-search-input" placeholder="Search courses, docs or simulators (e.g. Wokwi, NPTEL)..." aria-label="Search resources">
+            <button type="button" class="btn-search-clear" id="btn-clear-resource-search" aria-label="Clear Search" title="Clear Search" style="display: none;"><i data-lucide="x"></i></button>
+          </div>
+          <div class="res-category-pills" id="res-category-pills">
+            <button class="cat-pill active" data-cat="All">All Resources</button>
+            <button class="cat-pill" data-cat="Simulation & Math">Control & Math</button>
+            <button class="cat-pill" data-cat="Hardware Simulator">Hardware Simulators</button>
+            <button class="cat-pill" data-cat="Computer Science">Computer Science</button>
+            <button class="cat-pill" data-cat="Python & Data Science">Python & Data</button>
+            <button class="cat-pill" data-cat="DevOps & Version Control">Git & DevOps</button>
+            <button class="cat-pill" data-cat="Official Documentation">Official Docs</button>
+          </div>
+        </div>
+
+        <!-- Resources Grid -->
+        <div class="resources-grid" id="resources-grid">
+          <!-- 1. NPTEL -->
+          <div class="resource-card card" data-cat="Simulation & Math">
+            <div>
+              <div class="resource-header">
+                <div class="resource-icon-box"><i data-lucide="graduation-cap"></i></div>
+                <span class="resource-category-tag">Simulation & Math</span>
+              </div>
+              <h3 class="resource-name">NPTEL (SWAYAM) - Control & Transducers</h3>
+              <p class="resource-description">In-depth university-level video courses from premier IIT professors on Control Engineering, Transducers, Signals, and Process Automation.</p>
+            </div>
+            <div class="resource-footer">
+              <span class="resource-badge">IIT / IISc Video Lectures</span>
+              <div class="resource-actions-wrap">
+                <button class="btn-toggle-resource" data-title="NPTEL (SWAYAM) - Control & Transducers">
+                  <i data-lucide="circle"></i> <span>Mark Done</span>
+                </button>
+                <a href="https://nptel.ac.in/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                  <span>Access</span> <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Harvard CS50 -->
+          <div class="resource-card card" data-cat="Computer Science">
+            <div>
+              <div class="resource-header">
+                <div class="resource-icon-box"><i data-lucide="terminal"></i></div>
+                <span class="resource-category-tag">Computer Science</span>
+              </div>
+              <h3 class="resource-name">Harvard CS50x - Computer Science</h3>
+              <p class="resource-description">The world’s gold standard introductory computer science course teaching rigorous computational thinking, C memory architecture, pointers, and algorithms.</p>
+            </div>
+            <div class="resource-footer">
+              <span class="resource-badge">Self-Paced Course</span>
+              <div class="resource-actions-wrap">
+                <button class="btn-toggle-resource" data-title="Harvard CS50x - Computer Science">
+                  <i data-lucide="circle"></i> <span>Mark Done</span>
+                </button>
+                <a href="https://cs50.harvard.edu/x/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                  <span>Access</span> <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. freeCodeCamp -->
+          <div class="resource-card card" data-cat="Python & Data Science">
+            <div>
+              <div class="resource-header">
+                <div class="resource-icon-box"><i data-lucide="code-2"></i></div>
+                <span class="resource-category-tag">Python & Data Science</span>
+              </div>
+              <h3 class="resource-name">freeCodeCamp - Python & Algorithms</h3>
+              <p class="resource-description">Interactive, project-driven learning tracks covering Python for Everybody, Scientific Computing with Python, and Responsive Web UI.</p>
+            </div>
+            <div class="resource-footer">
+              <span class="resource-badge">100% Free Certifications</span>
+              <div class="resource-actions-wrap">
+                <button class="btn-toggle-resource" data-title="freeCodeCamp - Python & Algorithms">
+                  <i data-lucide="circle"></i> <span>Mark Done</span>
+                </button>
+                <a href="https://www.freecodecamp.org/learn/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                  <span>Access</span> <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Wokwi Simulator -->
+          <div class="resource-card card" data-cat="Hardware Simulator">
+            <div>
+              <div class="resource-header">
+                <div class="resource-icon-box"><i data-lucide="cpu"></i></div>
+                <span class="resource-category-tag">Hardware Simulator</span>
+              </div>
+              <h3 class="resource-name">Wokwi Simulator - Embedded Systems</h3>
+              <p class="resource-description">Simulate Arduino Uno/Mega, ESP32, and Raspberry Pi Pico in your web browser with virtual LCDs, sensors, servos, and relays—no physical hardware required.</p>
+            </div>
+            <div class="resource-footer">
+              <span class="resource-badge">In-Browser Simulator</span>
+              <div class="resource-actions-wrap">
+                <button class="btn-toggle-resource" data-title="Wokwi Simulator - Embedded Systems">
+                  <i data-lucide="circle"></i> <span>Mark Done</span>
+                </button>
+                <a href="https://wokwi.com/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                  <span>Access</span> <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Kaggle Learn -->
+          <div class="resource-card card" data-cat="Python & Data Science">
+            <div>
+              <div class="resource-header">
+                <div class="resource-icon-box"><i data-lucide="line-chart"></i></div>
+                <span class="resource-category-tag">Python & Data Science</span>
+              </div>
+              <h3 class="resource-name">Kaggle Learn - Python, NumPy & Pandas</h3>
+              <p class="resource-description">Bite-sized micro-courses to master practical Python dataframes, vectorized computations in NumPy, data cleaning, and statistical plotting.</p>
+            </div>
+            <div class="resource-footer">
+              <span class="resource-badge">Hands-On Notebooks</span>
+              <div class="resource-actions-wrap">
+                <button class="btn-toggle-resource" data-title="Kaggle Learn - Python, NumPy & Pandas">
+                  <i data-lucide="circle"></i> <span>Mark Done</span>
+                </button>
+                <a href="https://www.kaggle.com/learn" target="_blank" rel="noopener noreferrer" class="resource-link">
+                  <span>Access</span> <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. GitHub Skills -->
+          <div class="resource-card card" data-cat="DevOps & Version Control">
+            <div>
+              <div class="resource-header">
+                <div class="resource-icon-box"><i data-lucide="git-branch"></i></div>
+                <span class="resource-category-tag">DevOps & Version Control</span>
+              </div>
+              <h3 class="resource-name">GitHub Skills - Git & DevOps Workflows</h3>
+              <p class="resource-description">Interactive bot-driven tutorials teaching pull requests, merge conflict resolution, GitHub Pages deployment, and Markdown.</p>
+            </div>
+            <div class="resource-footer">
+              <span class="resource-badge">Interactive Repos</span>
+              <div class="resource-actions-wrap">
+                <button class="btn-toggle-resource" data-title="GitHub Skills - Git & DevOps Workflows">
+                  <i data-lucide="circle"></i> <span>Mark Done</span>
+                </button>
+                <a href="https://skills.github.com/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                  <span>Access</span> <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Python Official Language Tutorial -->
+          <div class="resource-card card" data-cat="Official Documentation">
+            <div>
+              <div class="resource-header">
+                <div class="resource-icon-box"><i data-lucide="file-code"></i></div>
+                <span class="resource-category-tag">Official Documentation</span>
+              </div>
+              <h3 class="resource-name">Python Official Language Tutorial</h3>
+              <p class="resource-description">The official Python documentation covering syntax, standard libraries, modules, exception handling, and object-oriented design.</p>
+            </div>
+            <div class="resource-footer">
+              <span class="resource-badge">Authoritative Reference</span>
+              <div class="resource-actions-wrap">
+                <button class="btn-toggle-resource" data-title="Python Official Language Tutorial">
+                  <i data-lucide="circle"></i> <span>Mark Done</span>
+                </button>
+                <a href="https://docs.python.org/3/tutorial/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                  <span>Access</span> <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Arduino Official Documentation -->
+          <div class="resource-card card" data-cat="Hardware Simulator">
+            <div>
+              <div class="resource-header">
+                <div class="resource-icon-box"><i data-lucide="microchip"></i></div>
+                <span class="resource-category-tag">Hardware Reference</span>
+              </div>
+              <h3 class="resource-name">Arduino Official Documentation</h3>
+              <p class="resource-description">Official schematics, reference APIs, and circuit tutorials for sensors, actuators, serial UART, and PWM controls.</p>
+            </div>
+            <div class="resource-footer">
+              <span class="resource-badge">Official Tutorials</span>
+              <div class="resource-actions-wrap">
+                <button class="btn-toggle-resource" data-title="Arduino Official Documentation">
+                  <i data-lucide="circle"></i> <span>Mark Done</span>
+                </button>
+                <a href="https://docs.arduino.cc/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                  <span>Access</span> <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. MATLAB Academy -->
+          <div class="resource-card card" data-cat="Simulation & Math">
+            <div>
+              <div class="resource-header">
+                <div class="resource-icon-box"><i data-lucide="binary"></i></div>
+                <span class="resource-category-tag">Simulation & Math</span>
+              </div>
+              <h3 class="resource-name">MATLAB Academy Onramp Courses</h3>
+              <p class="resource-description">Free self-paced interactive tutorials by MathWorks covering MATLAB basics and Simulink modeling for feedback control loops and Bode plots.</p>
+            </div>
+            <div class="resource-footer">
+              <span class="resource-badge">Free Interactive Onramp</span>
+              <div class="resource-actions-wrap">
+                <button class="btn-toggle-resource" data-title="MATLAB Academy Onramp Courses">
+                  <i data-lucide="circle"></i> <span>Mark Done</span>
+                </button>
+                <a href="https://matlabacademy.mathworks.com/" target="_blank" rel="noopener noreferrer" class="resource-link">
+                  <span>Access</span> <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 12. PROGRESS TRACKER ENGINE & CHECKLIST HUB                               -->
+    <!-- ========================================================================= -->
+    <section class="tracker-section" id="tracker">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i data-lucide="check-square"></i>
+            <span>HYBRID CLOUD & LOCAL ENGINE</span>
+          </div>
+          <h2 class="section-title">Interactive Progress & Checklist Hub</h2>
+          <p class="section-subtitle">
+            Every subject and project you check off across the roadmap is automatically saved in your browser and synced to the cloud when signed in.
+          </p>
+        </div>
+
+        <!-- Master Tracker Dashboard -->
+        <div class="tracker-dashboard card">
+          <div class="tracker-dash-grid">
+            <!-- Radial / Big Percentage Widget -->
+            <div class="tracker-gauge-card">
+              <div class="gauge-circle-outer">
+                <svg class="gauge-svg" viewBox="0 0 120 120" width="160" height="160" aria-label="Completion progress radial meter">
+                  <circle class="gauge-bg" cx="60" cy="60" r="52" fill="none" stroke-width="10"></circle>
+                  <circle class="gauge-bar" id="tracker-svg-fill" cx="60" cy="60" r="52" fill="none" stroke-width="10"
+                          stroke-dasharray="326.72" stroke-dashoffset="326.72" stroke-linecap="round"></circle>
+                </svg>
+                <div class="gauge-center-text">
+                  <span class="gauge-number" id="dash-percentage">0%</span>
+                  <span class="gauge-label">COMPLETED</span>
+                </div>
+              </div>
+              <p class="gauge-subtext">Overall 4-Year Journey</p>
+            </div>
+
+            <!-- Detailed Breakdown by Academic Year -->
+            <div class="tracker-breakdown">
+              <h3 class="breakdown-title">Progress Breakdown by Academic Year</h3>
+
+              <div class="year-progress-item">
+                <div class="yp-header">
+                  <span class="yp-name">Year 1: Foundation (2026–2027)</span>
+                  <span class="yp-val" id="yp-val-y1">0 / 11 items (0%)</span>
+                </div>
+                <div class="yp-track">
+                  <div class="yp-fill" id="yp-fill-y1" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <div class="year-progress-item">
+                <div class="yp-header">
+                  <span class="yp-name">Year 2: Skill Development (2027–2028)</span>
+                  <span class="yp-val" id="yp-val-y2">0 / 13 items (0%)</span>
+                </div>
+                <div class="yp-track">
+                  <div class="yp-fill" id="yp-fill-y2" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <div class="year-progress-item">
+                <div class="yp-header">
+                  <span class="yp-name">Year 3: Specialization (2028–2029)</span>
+                  <span class="yp-val" id="yp-val-y3">0 / 12 items (0%)</span>
+                </div>
+                <div class="yp-track">
+                  <div class="yp-fill" id="yp-fill-y3" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <div class="year-progress-item">
+                <div class="yp-header">
+                  <span class="yp-name">Year 4: Career Launch (2029–2030)</span>
+                  <span class="yp-val" id="yp-val-y4">0 / 8 items (0%)</span>
+                </div>
+                <div class="yp-track">
+                  <div class="yp-fill" id="yp-fill-y4" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <div class="year-progress-item highlight-item">
+                <div class="yp-header">
+                  <span class="yp-name"><strong>Hands-on Portfolio Projects</strong></span>
+                  <span class="yp-val" id="yp-val-proj">0 / 6 items (0%)</span>
+                </div>
+                <div class="yp-track">
+                  <div class="yp-fill proj-fill" id="yp-fill-proj" style="width: 0%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls Toolbar -->
+          <div class="tracker-controls">
+            <div class="tracker-status-message" id="tracker-status-msg">
+              <i data-lucide="shield-check"></i>
+              <span>All changes automatically saved to your browser and cloud backend.</span>
+            </div>
+            <div class="tracker-actions">
+              <button class="btn btn-outline-sm" id="btn-export-progress" title="Print or save as PDF">
+                <i data-lucide="printer"></i>
+                <span>Print / Save Blueprint</span>
+              </button>
+              <button class="btn btn-danger-sm" id="btn-reset-progress">
+                <i data-lucide="rotate-ccw"></i>
+                <span>Reset All Progress</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 13. CONTACT US & STUDENT SUPPORT SECTION                                  -->
+    <!-- ========================================================================= -->
+    <section class="about-section contact-section" id="contact">
+      <div id="about" style="position: absolute; margin-top: -100px;"></div>
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag">
+            <i data-lucide="mail"></i>
+            <span>GET IN TOUCH</span>
+          </div>
+          <h2 class="section-title">Contact Us &amp; Mentorship Feedback</h2>
+          <p class="section-subtitle">
+            Have questions about the AEIE 4-year roadmap, need project suggestions, or spotted a bug? Send feedback directly to our team.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Academic Department Profile Card -->
+          <div class="card about-card">
+            <div class="about-icon">
+              <i data-lucide="building-2"></i>
+            </div>
+            <h3>Department of AEIE</h3>
+            <p>
+              The Department of Applied Electronics and Instrumentation Engineering at the University Institute of Technology (UIT), 
+              The University of Burdwan, equips undergraduate engineers with a rigorous foundation across industrial automation, 
+              silicon devices, biomedical sensing, and cyber-physical systems.
+            </p>
+            <div class="contact-meta-row">
+              <i data-lucide="map-pin"></i>
+              <span>University Institute of Technology, Golapbag, Burdwan - 713104, West Bengal, India</span>
+            </div>
+            <div class="contact-meta-row">
+              <i data-lucide="globe"></i>
+              <span>Official University Portal: <a href="http://www.uit.buruniv.ac.in/" target="_blank" rel="noopener noreferrer">uit.buruniv.ac.in</a></span>
+            </div>
+            <div class="contact-meta-row">
+              <i data-lucide="mail"></i>
+              <span>Direct Developer Contact: <a href="mailto:debdeveloper2207@gmail.com">debdeveloper2207@gmail.com</a></span>
+            </div>
+            <div class="contact-support-highlight">
+              <i data-lucide="sparkles" class="support-sparkle-icon"></i>
+              <div>
+                <strong>Curriculum &amp; Mentorship Support</strong>
+                <p>Designed for UIT Burdwan students from first-year foundation through final-year campus placements and GATE 2030.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Contact & Feedback Form -->
+          <div class="card about-card contact-form-card">
+            <div class="about-icon">
+              <i data-lucide="message-square"></i>
+            </div>
+            <h3>Send Feedback or Query</h3>
+            <p class="sub-form-text">All messages are stored in our secure database and forwarded directly to <strong>debdeveloper2207@gmail.com</strong>.</p>
+            
+            <!-- Feedback Form -->
+            <form class="contact-form" id="contact-feedback-form">
+              <!-- Inline Response Alert -->
+              <div id="fb-response-alert" class="feedback-alert" style="display: none;" role="alert"></div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fb-name">Full Name <span class="required-star">*</span></label>
+                  <div class="input-icon-wrap">
+                    <i data-lucide="user"></i>
+                    <input type="text" id="fb-name" name="name" placeholder="e.g. Sayan Banerjee" required autocomplete="name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="fb-email">Email Address <span class="required-star">*</span></label>
+                  <div class="input-icon-wrap">
+                    <i data-lucide="mail"></i>
+                    <input type="email" id="fb-email" name="email" placeholder="e.g. sayan@uit.buruniv.ac.in" required autocomplete="email">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fb-subject">Subject <span class="required-star">*</span></label>
+                  <div class="input-icon-wrap">
+                    <i data-lucide="tag"></i>
+                    <input type="text" id="fb-subject" name="subject" placeholder="e.g. Suggestion for Semester 4 Control Project" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="fb-category">Feedback Category <span class="required-star">*</span></label>
+                  <div class="input-icon-wrap">
+                    <i data-lucide="filter"></i>
+                    <select id="fb-category" name="category" required>
+                      <option value="Suggestion">Suggestion</option>
+                      <option value="Bug Report">Bug Report</option>
+                      <option value="General Feedback" selected>General Feedback</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="fb-message">Message <span class="required-star">*</span></label>
+                <textarea id="fb-message" name="message" rows="4" placeholder="Write your question, curriculum suggestion, bug report, or career roadmap inquiry in detail..." required maxlength="3000"></textarea>
+                <div class="textarea-sub-info">
+                  <span id="fb-char-count">0</span> / 3000 characters
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full" id="fb-submit-btn">
+                <i data-lucide="send" class="btn-icon" id="fb-btn-icon"></i>
+                <span id="fb-btn-label">Submit Feedback</span>
+              </button>
+
+              <!-- Privacy Notice -->
+              <div class="contact-privacy-note">
+                <i data-lucide="shield-check" class="mini-icon"></i>
+                <span>Your feedback will be used only to improve AEIE Career Navigator. Delivered to <strong>debdeveloper2207@gmail.com</strong>. Please do not include passwords or confidential personal information.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 14. AUTHENTICATION MODAL (SIGN IN / REGISTER)                             -->
+  <!-- ========================================================================= -->
+  <div class="modal-overlay" id="auth-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card card">
+      <button class="modal-close-btn" id="btn-close-auth-modal" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="modal-header">
+        <div class="logo-icon-box mini">
+          <img src="assets/favicon.svg" alt="AEIE Icon" width="34" height="34">
+        </div>
+        <h3 class="modal-title" id="auth-modal-title">Student Account</h3>
+        <p class="modal-subtitle">Save your progress across devices &amp; access personalized milestones</p>
+      </div>
+
+      <!-- Auth Tabs: Login vs Register -->
+      <div class="auth-tabs">
+        <button class="auth-tab-btn active" id="tab-login-btn">Sign In</button>
+        <button class="auth-tab-btn" id="tab-register-btn">Create Account</button>
+      </div>
+
+      <!-- Login Form -->
+      <form class="auth-form" id="form-login">
+        <div class="form-group">
+          <label for="login-email">Email Address</label>
+          <div class="input-icon-wrap">
+            <i data-lucide="mail"></i>
+            <input type="email" id="login-email" placeholder="student@uit.buruniv.ac.in" required autocomplete="email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <div class="input-icon-wrap">
+            <i data-lucide="lock"></i>
+            <input type="password" id="login-password" placeholder="••••••••" required autocomplete="current-password">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="btn-submit-login">
+          <span>Sign In to Dashboard</span>
+          <i data-lucide="arrow-right" class="btn-icon-right"></i>
+        </button>
+      </form>
+
+      <!-- Register Form -->
+      <form class="auth-form" id="form-register" style="display: none;">
+        <div class="form-group">
+          <label for="reg-name">Full Name</label>
+          <div class="input-icon-wrap">
+            <i data-lucide="user"></i>
+            <input type="text" id="reg-name" placeholder="Sayan Banerjee" required autocomplete="name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="reg-email">Email Address</label>
+          <div class="input-icon-wrap">
+            <i data-lucide="mail"></i>
+            <input type="email" id="reg-email" placeholder="student@uit.buruniv.ac.in" required autocomplete="email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="reg-password">Password (min. 6 characters)</label>
+          <div class="input-icon-wrap">
+            <i data-lucide="lock"></i>
+            <input type="password" id="reg-password" placeholder="••••••••" minlength="6" required autocomplete="new-password">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="reg-sem">Current Semester</label>
+            <select id="reg-sem">
+              <option value="1">Semester 1 (Year 1)</option>
+              <option value="2">Semester 2 (Year 1)</option>
+              <option value="3">Semester 3 (Year 2)</option>
+              <option value="4">Semester 4 (Year 2)</option>
+              <option value="5">Semester 5 (Year 3)</option>
+              <option value="6">Semester 6 (Year 3)</option>
+              <option value="7">Semester 7 (Year 4)</option>
+              <option value="8">Semester 8 (Year 4)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="reg-goal">Primary Career Focus</label>
+            <select id="reg-goal">
+              <option value="Core Electronics & Embedded">Core Electronics & Embedded</option>
+              <option value="Industrial Automation & PLC">Industrial Automation & PLC</option>
+              <option value="GATE & Premier M.Tech">GATE & Premier M.Tech</option>
+              <option value="Software & Systems Dev">Software & Systems Dev</option>
+              <option value="PSU & Govt. Engineering">PSU & Govt. Engineering</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="btn-submit-register">
+          <span>Create Student Account</span>
+          <i data-lucide="arrow-right" class="btn-icon-right"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 15. FOOTER                                                                -->
+  <!-- ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo footer-logo">
+            <div class="logo-icon-box">
+              <img src="assets/favicon.svg" alt="AEIE Icon" class="brand-logo-img" width="36" height="36">
+            </div>
+            <div class="logo-text-group">
+              <span class="logo-main"><strong class="logo-highlight">AEIE</strong> CAREER NAVIGATOR</span>
+              <span class="logo-sub">UIT BURDWAN • BATCH 2026–2030</span>
+            </div>
+          </div>
+          <p class="footer-mission">
+            Dedicated academic and career planning blueprint for students of Applied Electronics and 
+            Instrumentation Engineering (AEIE) at the University Institute of Technology (UIT), 
+            The University of Burdwan, West Bengal, India.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Dashboard Home</a></li>
+            <li><a href="#roadmap">4-Year Curriculum</a></li>
+            <li><a href="#analytics">Analytics Charts</a></li>
+            <li><a href="#projects">Project Portfolio</a></li>
+            <li><a href="#careers">Career Pathways</a></li>
+            <li><a href="#gate">GATE & Higher Studies</a></li>
+            <li><a href="#internships">Internship Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Key Portals</h4>
+          <ul class="footer-links">
+            <li><a href="https://internship.aicte-india.org/" target="_blank" rel="noopener noreferrer">AICTE Internship</a></li>
+            <li><a href="https://nptel.ac.in/" target="_blank" rel="noopener noreferrer">NPTEL SWAYAM</a></li>
+            <li><a href="https://wokwi.com/" target="_blank" rel="noopener noreferrer">Wokwi Simulator</a></li>
+            <li><a href="https://matlabacademy.mathworks.com/" target="_blank" rel="noopener noreferrer">MATLAB Academy</a></li>
+            <li><a href="https://cs50.harvard.edu/x/" target="_blank" rel="noopener noreferrer">Harvard CS50x</a></li>
+            <li><a href="https://docs.arduino.cc/" target="_blank" rel="noopener noreferrer">Arduino Docs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Academic Context</h4>
+          <p class="footer-context-text">
+            <strong>Department:</strong> Applied Electronics & Instrumentation Engineering<br>
+            <strong>Institution:</strong> University Institute of Technology (UIT)<br>
+            <strong>Affiliation:</strong> The University of Burdwan<br>
+            <strong>Location:</strong> Golapbag, Burdwan, West Bengal, India
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <!-- Website Creator Credit (Small, Elegant, Professional) -->
+        <div class="creator-credit-wrapper">
+          <div class="creator-credit-card" title="AEIE Career Navigator • Creator Credit">
+            <span class="creator-credit-heart"><i data-lucide="heart" class="heart-icon"></i></span>
+            <span class="creator-credit-made">Made with care by <strong class="creator-name">Deb</strong>.</span>
+            <span class="creator-credit-dot" aria-hidden="true">•</span>
+            <span class="creator-credit-brand">AEIE Career Navigator</span>
+            <span class="creator-credit-dot" aria-hidden="true">•</span>
+            <span class="creator-credit-rights">&copy; 2026 All Rights Reserved.</span>
+          </div>
+        </div>
+
+        <p class="copyright-text">
+          Department of Applied Electronics &amp; Instrumentation Engineering, University Institute of Technology (UIT), The University of Burdwan. Built with Node.js, Express, MongoDB &amp; Modern Web Standards.
+        </p>
+        <p class="disclaimer-mini">
+          Disclaimer: Course syllabus, subject codes, and recruitment conditions are subject to university ordinances and corporate recruitment guidelines.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- FLOATING ACTION: BACK TO TOP BUTTON                                       -->
+  <!-- ========================================================================= -->
+  <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top of page" title="Back to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <!-- ========================================================================= -->
+  <!-- TOAST NOTIFICATION CONTAINER                                              -->
+  <!-- ========================================================================= -->
+  <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Custom Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
